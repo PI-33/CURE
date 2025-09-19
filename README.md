@@ -1,5 +1,5 @@
 <h2 align="center">
-  Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning
+  [NeurIPS 2025 Spotlight] Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning
 </h2>
 
 <p align="center">
