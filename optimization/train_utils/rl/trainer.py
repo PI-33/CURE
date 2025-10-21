@@ -92,28 +92,59 @@ class RayPPOTrainer:
     async def make_experience(self, rl_data, **generate_kwargs):
         experiences = []
 
-        import json
-
         prompts_set = []
         response_set = []
         rewards_set = []
-        
-        for i in range(len(rl_data)):
-            prompts_set.append(rl_data[i]["prompt"])
-            response_set.append(rl_data[i]["response"])
-            rewards_set.append(rl_data[i]["reward"])
+        metadata_set = []
+
+        for sample in rl_data:
+            prompt = sample["prompt"]
+            responses = sample.get("responses", [])
+            rewards = sample.get("rewards", [])
+
+            if len(responses) == 0 or len(responses) != len(rewards):
+                continue
+
+            reward_tensor = torch.tensor(rewards, dtype=torch.float32)
+            group_mean = reward_tensor.mean()
+            group_std = reward_tensor.std(unbiased=False)
+            centered = reward_tensor - group_mean
+            if group_std > 1e-6:
+                centered = centered / (group_std + 1e-8)
+
+            for idx, response in enumerate(responses):
+                prompts_set.append(prompt)
+                response_set.append(response)
+                rewards_set.append(centered[idx].item())
+                metadata_set.append(
+                    {
+                        "raw_reward": reward_tensor[idx].item(),
+                        "relative_reward": centered[idx].item(),
+                        "group_mean": group_mean.item(),
+                        "group_std": group_std.item(),
+                        "group_size": len(responses),
+                    }
+                )
 
         if self.cfg.use_compute_reward_fn:
             async with Timer("Calculate custom rewards"):
                 dp_tasks = []
                 reward_fn = partial(self.custom_reward_fn, reward_model_fn=self._warp_custom_reward_model_fn())
-                all_prompts, outputs, custom_rewards = await reward_fn(prompts_set, response_set, rewards_set)
+                all_prompts, outputs, custom_rewards, valid_indices = await reward_fn(
+                    prompts_set, response_set, rewards_set
+                )
+                metadata_set = [metadata_set[i] for i in valid_indices]
                 assert len(all_prompts) == len(
                     outputs
                 ), "generate objects number after custom reward function must be equal to all inputs number"
         else:
-            all_prompts, outputs, custom_rewards = all_prompts, outputs, None
-        
+            all_prompts, outputs, custom_rewards = prompts_set, response_set, None
+
+        if len(all_prompts) == 0:
+            return
+        if metadata_set:
+            assert len(metadata_set) == len(all_prompts), "metadata size must match prompts size"
+
         # 1.3 packing samples
         async with Timer("Packing samples"):
             (
@@ -122,8 +153,13 @@ class RayPPOTrainer:
                 ret_num_actions,
                 ret_packed_seq_lens,
                 ret_custom_rewards,
+                ret_metadata,
             ) = self._convert_prompts_outputs_to_batch_tensors_packing(
-                all_prompts, outputs, custom_rewards, self.cfg.packing_max_len
+                all_prompts,
+                outputs,
+                custom_rewards,
+                self.cfg.packing_max_len,
+                sample_metadata=metadata_set,
             )
             action_masks = None
 
@@ -136,6 +172,7 @@ class RayPPOTrainer:
                 ret_num_actions,
                 ret_packed_seq_lens,
                 ret_custom_rewards,
+                ret_metadata,
             )
             logger.info(f"experiences size: {len(experiences)}")
 
@@ -160,6 +197,7 @@ class RayPPOTrainer:
         num_actions_all: Optional[List[int]],
         packed_seq_lens_all: Optional[List[int]],
         custom_rewards_all: Optional[List[torch.Tensor]],
+        metadata_all: Optional[List[List[dict]]],
     ):
         num_policy_dp_groups = self.cfg.actor_num_nodes * self.cfg.actor_num_gpus_per_node
         num_critic_dp_groups = self.cfg.critic_num_nodes * self.cfg.critic_num_gpus_per_node
@@ -239,6 +277,18 @@ class RayPPOTrainer:
                 "total_length": total_length,
                 "num_actions": num_actions_all[i],
             }
+            if metadata_all is not None:
+                sample_metadata = metadata_all[i]
+                relative = torch.tensor([m["relative_reward"] for m in sample_metadata], dtype=torch.float32).unsqueeze(0)
+                raw = torch.tensor([m["raw_reward"] for m in sample_metadata], dtype=torch.float32).unsqueeze(0)
+                mean = torch.tensor([m["group_mean"] for m in sample_metadata], dtype=torch.float32).unsqueeze(0)
+                std = torch.tensor([m["group_std"] for m in sample_metadata], dtype=torch.float32).unsqueeze(0)
+                size = torch.tensor([m["group_size"] for m in sample_metadata], dtype=torch.float32).unsqueeze(0)
+                info["group_relative_reward"] = relative
+                info["group_raw_reward"] = raw
+                info["group_reward_mean"] = mean
+                info["group_reward_std"] = std
+                info["group_size"] = size
             experiences.append(
                 Experience(
                     sequences_all[i],
@@ -340,7 +390,7 @@ class RayPPOTrainer:
         outputs: List[Any],
         scores: List[Any],
         reward_model_fn: Callable[[List[str], List[str]], Awaitable[torch.Tensor]],
-    ) -> Tuple[List[str], List[str], List[torch.Tensor]]:
+    ) -> Tuple[List[str], List[str], List[torch.Tensor], List[int]]:
         responses = outputs
         output_tokens = self._tokenize(responses, self.cfg.generate_max_len, padding=False)["input_ids"]
 
@@ -356,13 +406,15 @@ class RayPPOTrainer:
         res_prompts = []
         res_responses = []
         res_score_tensors = []
-        for prompt, response, score_tensor in zip(prompts, responses, score_tensors):
+        valid_indices = []
+        for idx, (prompt, response, score_tensor) in enumerate(zip(prompts, responses, score_tensors)):
             if len(response) > 0:
                 res_prompts.append(prompt)
                 res_responses.append(response)
                 res_score_tensors.append(score_tensor)
+                valid_indices.append(idx)
 
-        return res_prompts, res_responses, res_score_tensors
+        return res_prompts, res_responses, res_score_tensors, valid_indices
 
     @torch.no_grad()
     async def _calc_advantages_and_returns(self, experience: Experience):
@@ -458,7 +510,12 @@ class RayPPOTrainer:
         return sequences, attention_mask, action_mask
 
     def _convert_prompts_outputs_to_batch_tensors_packing(
-        self, prompts: List[str], outputs: List[str], custom_rewards: Optional[List[torch.Tensor]], packing_max_len: int
+        self,
+        prompts: List[str],
+        outputs: List[str],
+        custom_rewards: Optional[List[torch.Tensor]],
+        packing_max_len: int,
+        sample_metadata: Optional[List[dict]] = None,
     ):
         ret_sequences = []
         ret_attention_masks = []
@@ -468,6 +525,10 @@ class RayPPOTrainer:
             ret_custom_rewards = []
         else:
             ret_custom_rewards = None
+        if sample_metadata is not None:
+            ret_metadata = []
+        else:
+            ret_metadata = None
 
         assert (
             len(prompts) == len(outputs) and len(prompts) > 0
@@ -479,6 +540,7 @@ class RayPPOTrainer:
             out_num_actions = []
             out_packed_seq_lens = []
             rewards = [] if custom_rewards else None
+            metadata = [] if sample_metadata is not None else None
             seq_offset = 0
             seq_index = 0
             return (
@@ -487,6 +549,7 @@ class RayPPOTrainer:
                 out_num_actions,
                 out_packed_seq_lens,
                 rewards,
+                metadata,
                 seq_offset,
                 seq_index,
             )
@@ -497,6 +560,7 @@ class RayPPOTrainer:
             out_num_actions,
             out_packed_seq_lens,
             rewards,
+            metadata,
             seq_offset,
             seq_index,
             sequence,
@@ -504,6 +568,7 @@ class RayPPOTrainer:
             num_action,
             total_len,
             custom_rewards,
+            sample_metadata,
             i,
         ):
             out_sequence[seq_offset : seq_offset + total_len] = torch.tensor(sequence)
@@ -512,6 +577,8 @@ class RayPPOTrainer:
             out_packed_seq_lens.append(total_len)
             if custom_rewards:
                 rewards.append(custom_rewards[i])
+            if metadata is not None and sample_metadata is not None:
+                metadata.append(sample_metadata[i])
             return seq_offset + total_len, seq_index + 1
 
         sequences = []
@@ -535,6 +602,7 @@ class RayPPOTrainer:
             out_num_actions,
             out_packed_seq_lens,
             rewards,
+            metadata,
             seq_offset,
             seq_index,
         ) = _new_instance()
@@ -548,6 +616,7 @@ class RayPPOTrainer:
                     out_num_actions,
                     out_packed_seq_lens,
                     rewards,
+                    metadata,
                     seq_offset,
                     seq_index,
                     sequence,
@@ -555,6 +624,7 @@ class RayPPOTrainer:
                     num_action,
                     total_len,
                     custom_rewards,
+                    sample_metadata,
                     i,
                 )
             elif seq_offset + total_len == packing_max_len:
@@ -564,6 +634,7 @@ class RayPPOTrainer:
                     out_num_actions,
                     out_packed_seq_lens,
                     rewards,
+                    metadata,
                     seq_offset,
                     seq_index,
                     sequence,
@@ -571,6 +642,7 @@ class RayPPOTrainer:
                     num_action,
                     total_len,
                     custom_rewards,
+                    sample_metadata,
                     i,
                 )
                 valid_size = out_attention_mask.nonzero().size(0)
@@ -580,12 +652,15 @@ class RayPPOTrainer:
                 ret_packed_seq_lens.append(out_packed_seq_lens)
                 if custom_rewards:
                     ret_custom_rewards.append(rewards)
+                if metadata is not None:
+                    ret_metadata.append(metadata)
                 (
                     out_sequence,
                     out_attention_mask,
                     out_num_actions,
                     out_packed_seq_lens,
                     rewards,
+                    metadata,
                     seq_offset,
                     seq_index,
                 ) = _new_instance()
@@ -604,6 +679,7 @@ class RayPPOTrainer:
                         out_num_actions,
                         out_packed_seq_lens,
                         rewards,
+                        metadata,
                         seq_offset,
                         seq_index,
                     ) = _new_instance()
@@ -613,6 +689,7 @@ class RayPPOTrainer:
                         out_num_actions,
                         out_packed_seq_lens,
                         rewards,
+                        metadata,
                         seq_offset,
                         seq_index,
                         sequence,
@@ -620,6 +697,7 @@ class RayPPOTrainer:
                         num_action,
                         total_len,
                         custom_rewards,
+                        sample_metadata,
                         i,
                     )
 
@@ -631,8 +709,17 @@ class RayPPOTrainer:
             ret_packed_seq_lens.append(out_packed_seq_lens)
             if custom_rewards:
                 ret_custom_rewards.append(rewards)
+            if metadata is not None:
+                ret_metadata.append(metadata)
 
-        return ret_sequences, ret_attention_masks, ret_num_actions, ret_packed_seq_lens, ret_custom_rewards
+        return (
+            ret_sequences,
+            ret_attention_masks,
+            ret_num_actions,
+            ret_packed_seq_lens,
+            ret_custom_rewards,
+            ret_metadata,
+        )
 
     def _get_dp_group_models(self, dp_rank: int, model_type: str = ""):
         model = getattr(self, model_type)
@@ -789,6 +876,7 @@ class RayPPOTrainer:
                     attention_mask,
                     _,
                     packed_seq_lens,
+                    _,
                     _,
                 ) = self._convert_prompts_outputs_to_batch_tensors_packing(
                     prompts, outputs, None, self.cfg.packing_max_len

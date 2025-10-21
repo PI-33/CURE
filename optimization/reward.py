@@ -106,22 +106,25 @@ for i in range(len(data)):
 
     # reward for code
     code_reward = np.mean(all_test_table_i, 1)
-    #code_reward = all_test_table_i.all(axis=1).astype(float)
     code_reward = normalize_reward(code_reward)
     if code_reward is not None:
         if enable_efficient:
             code_reward = length_regularize(code_reward, data[i]["code_response_length"])
         if code_reward is not None:
-            code_reward = code_reward.tolist()
-            for j in range(len(code_reward)):
-                code_data_i = {}
-                code_data_i["prompt"] = data[i]["code_generation_prompt"]
+            group_entry = {
+                "prompt": data[i]["code_generation_prompt"],
+                "responses": [],
+                "rewards": [],
+            }
+            for j, reward_j in enumerate(code_reward.tolist()):
                 if data[i]["code_response_length"][j] < max_generation_len:
-                    code_data_i["response"] = data[i]["full_code_generation"][j] + "<|im_end|>"
+                    response_j = data[i]["full_code_generation"][j] + "<|im_end|>"
                 else:
-                    code_data_i["response"] = data[i]["full_code_generation"][j]
-                code_data_i["reward"] = code_reward[j]
-                code_data.append(code_data_i)
+                    response_j = data[i]["full_code_generation"][j]
+                group_entry["responses"].append(response_j)
+                group_entry["rewards"].append(reward_j)
+            if len(group_entry["responses"]) > 0:
+                code_data.append(group_entry)
     
     # reward for case
     correct_code_list = np.where(all_test_table_i.all(axis=1))[0].tolist()
@@ -159,16 +162,20 @@ for i in range(len(data)):
             if enable_efficient:
                 case_reward = length_regularize(case_reward, data[i]["case_response_length"])
             if case_reward is not None:
-                case_reward = case_reward.tolist()
-                for j in range(len(case_reward)):
-                    case_data_i = {}
-                    case_data_i["prompt"] = data[i]["case_generation_prompt"]
+                group_entry = {
+                    "prompt": data[i]["case_generation_prompt"],
+                    "responses": [],
+                    "rewards": [],
+                }
+                for j, reward_j in enumerate(case_reward.tolist()):
                     if data[i]["case_response_length"][j] < max_generation_len:
-                        case_data_i["response"] = data[i]["full_case_generation"][j] + "<|im_end|>"
+                        response_j = data[i]["full_case_generation"][j] + "<|im_end|>"
                     else:
-                        case_data_i["response"] = data[i]["full_case_generation"][j]
-                    case_data_i["reward"] = case_reward[j]
-                    case_data.append(case_data_i)
+                        response_j = data[i]["full_case_generation"][j]
+                    group_entry["responses"].append(response_j)
+                    group_entry["rewards"].append(reward_j)
+                if len(group_entry["responses"]) > 0:
+                    case_data.append(group_entry)
 
 
 
