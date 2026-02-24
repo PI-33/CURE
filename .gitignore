@@ -1,0 +1,39 @@
+# Temporary data generated during training
+optimization/temp_data/
+optimization/ckpt/
+
+# Logs (keep directory structure but ignore content)
+logs/*.log
+logs/fail/
+
+# Test results
+test_results/
+
+# Evaluation and optimization results
+evaluation/results/
+optimization/results/
+
+# Data files (too large for git)
+data/*.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Torch extensions cache
+*.so
+*.o

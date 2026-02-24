@@ -3,25 +3,20 @@
 
 
 # the model you want to optimize
-pretrained_model = "Qwen/Qwen2.5-7B-Instruct"
+pretrained_model = "/mnt/shared-storage-user/ai4good2-share/models/Qwen/Qwen3-4B"
 
 # the training data and evaluation data
-train_dataset = "CodeContests"
-eval_dataset = "CodeContests_test"
+train_dataset = "CodeContests_200"
+eval_dataset = "MBPP"
 
 # total steps for optimization
-total_steps = 120
+total_steps = 3
 
 # evaluate every eval_interval steps
-eval_interval = 10
+eval_interval = 3
 
 # save optimized model every save_interval steps
-save_interval = 40
-
-
-
-
-
+save_interval = 3
 
 
 
@@ -29,18 +24,18 @@ save_interval = 40
 # ============= config for sampling in each step =================
 
 # number of codes and unit tests sampled in each step
-k_code = 16
-k_case = 16
+k_code = 4
+k_case = 4
 
 # temperature
 temp = 1.0
 
 # number of tasks for sampling in each step
-n_sample_per_step = 100
+n_sample_per_step = 20
 
 # GPU usage for vllm inference, [[0]] represents only one engine with one GPU; [[0, 1], [2, 3]] represents two engines each with 2 GPUs
 # each engine loads a model, so for <=7B model, you can only set GPU numbers for each engine <= 2
-gpu_groups = [[0,1],[2,3],[4,5],[6,7]]
+gpu_groups = [[0,1]]
 
 # max ground-truth unit test we can use here
 max_ground_truth_test = 8
@@ -66,7 +61,7 @@ system_case_prompts = """<|im_start|>You are a helpful assistant help user gener
 <|im_end|>\n<|im_start|>User: Given a coding task, instead of providing the final script, your task is to generate a new test example (both input, output and explanation).
 This is the problem:\n{{problem}}\n
 {{example_intro}}
-You need to provide a new test example. A good test example should be completely accurate and conform to the problem’s format requirements, while also possessing enough discriminative power to distinguish correct code from incorrect code.
+You need to provide a new test example. A good test example should be completely accurate and conform to the problem's format requirements, while also possessing enough discriminative power to distinguish correct code from incorrect code.
 Before providing a test example, you must think carefully and reason step by step to derive an input and output you are very confident are correct. For example, start by designing an input you can reliably handle, then compute the output step by step. If you're unsure about the output, revise or re-design the input to ensure accuracy. Directly providing input/output pairs without this process is discouraged, as it often results in low accuracy.
 Finally, after completing these previous thinking and derivation steps (you should not write the final test example unless you have gone through these steps very thoroughly), you MUST put your final test example in the following format:\n
 **Test Input:**\n```input here```\n\n**Test Output:**\n```output here```\n\n**Explanation:**\n\nexplanation here.\n <|im_end|>\n<|im_start|>Assistant: """
@@ -76,37 +71,13 @@ special_requirements = """You should use input() to input and print() to output 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 # ============= config for execution in each step =================
 
 # how many parts the execution tasks are divided into (too small may get stuck), should be proportion to k_code * k_case * n_sample_per_step
-num_chunks = 48 * 4
+num_chunks = 16
 
 # the BoN setting you want to see in each step's output
-scale_tuple_list = [(4, 4), (16, 16)]
-
-
-
-
-
-
-
-
-
-
-
-
+scale_tuple_list = [(4, 4)]
 
 
 
@@ -126,24 +97,10 @@ post_stage = False
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # ============= config for training in each step =================
 
 # number of GPUs
-total_num_nodes = 8
+total_num_nodes = 2
 
 # learning rate
 actor_learning_rate = 1e-6
@@ -176,17 +133,11 @@ optimized_model_name = "optimized"
 
 
 
-
-
-
-
 # ============= config for evaluation during the optimization =================
 
-eval_k_code = 16
-eval_k_case = 16
-eval_scale_tuple_list = [(4, 4), (16, 16)]
-eval_num_chunks = 128 * 4
+eval_k_code = 4
+eval_k_case = 4
+eval_scale_tuple_list = [(4, 4)]
+eval_num_chunks = 16
 eval_no_example = True
 eval_max_test = 8
-
-

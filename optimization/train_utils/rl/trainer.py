@@ -126,6 +126,10 @@ class RayPPOTrainer:
                     }
                 )
 
+        if len(prompts_set) == 0:
+            logger.warning("No valid training samples found in this batch, skipping.")
+            return
+
         if self.cfg.use_compute_reward_fn:
             async with Timer("Calculate custom rewards"):
                 dp_tasks = []
@@ -279,16 +283,11 @@ class RayPPOTrainer:
             }
             if metadata_all is not None:
                 sample_metadata = metadata_all[i]
-                relative = torch.tensor([m["relative_reward"] for m in sample_metadata], dtype=torch.float32).unsqueeze(0)
-                raw = torch.tensor([m["raw_reward"] for m in sample_metadata], dtype=torch.float32).unsqueeze(0)
-                mean = torch.tensor([m["group_mean"] for m in sample_metadata], dtype=torch.float32).unsqueeze(0)
-                std = torch.tensor([m["group_std"] for m in sample_metadata], dtype=torch.float32).unsqueeze(0)
-                size = torch.tensor([m["group_size"] for m in sample_metadata], dtype=torch.float32).unsqueeze(0)
-                info["group_relative_reward"] = relative
-                info["group_raw_reward"] = raw
-                info["group_reward_mean"] = mean
-                info["group_reward_std"] = std
-                info["group_size"] = size
+                info["group_relative_reward"] = torch.tensor(sum(m["relative_reward"] for m in sample_metadata) / len(sample_metadata), dtype=torch.float32).unsqueeze(0)
+                info["group_raw_reward"] = torch.tensor(sum(m["raw_reward"] for m in sample_metadata) / len(sample_metadata), dtype=torch.float32).unsqueeze(0)
+                info["group_reward_mean"] = torch.tensor(sum(m["group_mean"] for m in sample_metadata) / len(sample_metadata), dtype=torch.float32).unsqueeze(0)
+                info["group_reward_std"] = torch.tensor(sum(m["group_std"] for m in sample_metadata) / len(sample_metadata), dtype=torch.float32).unsqueeze(0)
+                info["group_size"] = torch.tensor(sum(m["group_size"] for m in sample_metadata) / len(sample_metadata), dtype=torch.float32).unsqueeze(0)
             experiences.append(
                 Experience(
                     sequences_all[i],
@@ -673,6 +672,8 @@ class RayPPOTrainer:
                     ret_packed_seq_lens.append(out_packed_seq_lens)
                     if custom_rewards:
                         ret_custom_rewards.append(rewards)
+                    if metadata is not None:
+                        ret_metadata.append(metadata)
                     (
                         out_sequence,
                         out_attention_mask,
