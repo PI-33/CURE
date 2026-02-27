@@ -43,6 +43,7 @@ class RayPPOTrainer:
         self.colocate_pg = colocate_pg
 
         self.writer = SummaryWriter(log_dir=self.cfg.tensorboard_log_dir)
+        self.global_step = getattr(self.cfg, 'global_step', 0)
         self.replay_buffer = NaiveReplayBuffer(
             sample_batch_size=self.cfg.micro_train_batch_size,
             limit=0,
@@ -60,17 +61,20 @@ class RayPPOTrainer:
 
         if self.cfg.separate_training == True:
             train_data_list = [self.cfg.rl_code_data, self.cfg.rl_case_data]
+            data_tags = ["code", "case"]
         else:
             train_data_list = [self.cfg.rl_data]
-        
-        for data_name in train_data_list:
+            data_tags = ["all"]
 
-            logger.info(f"Training with {data_name}")
+        for data_idx, data_name in enumerate(train_data_list):
+            tag = data_tags[data_idx]
+
+            logger.info(f"Training with {data_name} (tag={tag}, global_step={self.global_step})")
 
             with open(data_name, 'r') as f:
                 rl_data = json.load(f)
 
-            await self.make_experience(rl_data)
+            await self.make_experience(rl_data, tag=tag)
 
             num_policy_dp_nodes = self.cfg.actor_num_nodes * self.cfg.actor_num_gpus_per_node
             num_critic_dp_nodes = self.cfg.critic_num_nodes * self.cfg.critic_num_gpus_per_node
@@ -78,9 +82,31 @@ class RayPPOTrainer:
 
             async with Timer("Actor model training"):
                 await self.policy_model.backload_to_gpu()
-                await self.ppo_local_train_policy(policy_buffers, 1)
+                train_status = await self.ppo_local_train_policy(policy_buffers, 1)
                 await self.policy_model.offload_to_cpu()
-            
+
+            if train_status:
+                step_key = self.global_step
+                self.writer.add_scalar(f"train/{tag}/policy_loss", train_status.get("policy_loss", 0), step_key)
+                self.writer.add_scalar(f"train/{tag}/kl_loss", train_status.get("kl_loss", 0), step_key)
+                self.writer.add_scalar(f"train/{tag}/total_loss", train_status.get("total_loss", 0), step_key)
+                self.writer.add_scalar(f"train/{tag}/clip_ratio", train_status.get("clip_ratio", 0), step_key)
+                self.writer.add_scalar(f"train/{tag}/entropy", train_status.get("entropy", 0), step_key)
+                self.writer.add_scalar(f"train/{tag}/actor_lr", train_status.get("actor_lr", 0), step_key)
+                self.writer.add_scalar(f"train/{tag}/policy_update_steps", train_status.get("policy_update_steps", 0), step_key)
+                if "group_raw_reward" in train_status:
+                    self.writer.add_scalar(f"train/{tag}/group_raw_reward", train_status["group_raw_reward"], step_key)
+                    self.writer.add_scalar(f"train/{tag}/group_relative_reward", train_status["group_relative_reward"], step_key)
+                logger.info(
+                    f"[step={self.global_step} tag={tag}] "
+                    f"policy_loss={train_status.get('policy_loss', 0):.4f}, "
+                    f"kl_loss={train_status.get('kl_loss', 0):.4f}, "
+                    f"clip_ratio={train_status.get('clip_ratio', 0):.4f}, "
+                    f"entropy={train_status.get('entropy', 0):.4f}, "
+                    f"lr={train_status.get('actor_lr', 0):.2e}"
+                )
+                self.writer.flush()
+
             self.replay_buffer.clear()
 
         await self.policy_model.async_save_model(self.tokenizer, 1)
@@ -89,7 +115,7 @@ class RayPPOTrainer:
         
 
     @torch.no_grad()
-    async def make_experience(self, rl_data, **generate_kwargs):
+    async def make_experience(self, rl_data, tag="all", **generate_kwargs):
         experiences = []
 
         prompts_set = []
@@ -182,6 +208,14 @@ class RayPPOTrainer:
 
         # 3. calculate advantages and returns / along with tensorboard logging
 
+        avg_custom_rewards = 0
+        avg_response_length = 0
+        avg_advantages = 0
+        avg_advantages_abs = 0
+        avg_group_raw_reward = 0
+        avg_group_relative_reward = 0
+        avg_group_reward_std = 0
+
         async with Timer("Calculate advantages and returns"):
             adv_tasks = []
             for experience in experiences:
@@ -189,7 +223,34 @@ class RayPPOTrainer:
 
             for tsk in asyncio.as_completed(adv_tasks):
                 experience, metrics = await tsk
+                avg_custom_rewards += metrics.get("avg_custom_rewards", 0)
+                avg_response_length += metrics.get("avg_response_length", 0)
+                avg_advantages += metrics.get("avg_advantages", 0)
+                avg_advantages_abs += metrics.get("avg_advantages_abs", 0)
+                avg_group_raw_reward += metrics.get("avg_group_raw_reward", 0)
+                avg_group_relative_reward += metrics.get("avg_group_relative_reward", 0)
+                avg_group_reward_std += metrics.get("avg_group_reward_std", 0)
                 self.replay_buffer.append(experience)
+
+        n_exp = max(len(experiences), 1)
+        step_key = self.global_step
+
+        self.writer.add_scalar(f"experience/{tag}/avg_custom_rewards", avg_custom_rewards / n_exp, step_key)
+        self.writer.add_scalar(f"experience/{tag}/avg_response_length", avg_response_length / n_exp, step_key)
+        self.writer.add_scalar(f"experience/{tag}/avg_advantages", avg_advantages / n_exp, step_key)
+        self.writer.add_scalar(f"experience/{tag}/avg_advantages_abs", avg_advantages_abs / n_exp, step_key)
+        self.writer.add_scalar(f"experience/{tag}/avg_group_raw_reward", avg_group_raw_reward / n_exp, step_key)
+        self.writer.add_scalar(f"experience/{tag}/avg_group_relative_reward", avg_group_relative_reward / n_exp, step_key)
+        self.writer.add_scalar(f"experience/{tag}/avg_group_reward_std", avg_group_reward_std / n_exp, step_key)
+        self.writer.flush()
+
+        logger.info(
+            f"[step={self.global_step} tag={tag}] "
+            f"avg_custom_rewards={avg_custom_rewards / n_exp:.4f}, "
+            f"avg_response_length={avg_response_length / n_exp:.1f}, "
+            f"avg_group_raw_reward={avg_group_raw_reward / n_exp:.4f}, "
+            f"avg_group_reward_std={avg_group_reward_std / n_exp:.4f}"
+        )
 
 
     @torch.no_grad()
@@ -377,11 +438,11 @@ class RayPPOTrainer:
     async def ppo_local_train_policy(self, replay_buffers: List[NaiveReplayBuffer], global_steps: int):
         if global_steps > self.cfg.freezing_actor_steps:
             async with Timer("Policy model training"):
-                await self.policy_model.async_ppo_train(global_steps, replay_buffers)
+                status = await self.policy_model.async_ppo_train(global_steps, replay_buffers)
             await self.policy_model.async_run_method("empty_cache")
+            return status[0] if status else None
 
-        if global_steps > self.cfg.freezing_actor_steps:
-            return 
+        return None
 
     async def custom_reward_fn(
         self,
@@ -442,18 +503,35 @@ class RayPPOTrainer:
         experience.info["return"] = return_sums
         experience.kl = None
 
+        avg_response_length = experience.info["response_length"].mean().item() if torch.is_tensor(experience.info["response_length"]) else 0
+
+        if experience.info["custom_rewards"] is not None:
+            avg_custom_rewards = torch.stack([r.sum() for r in experience.info["custom_rewards"]]).mean().item()
+        else:
+            avg_custom_rewards = 0
+
+        avg_group_raw_reward = experience.info.get("group_raw_reward", torch.tensor(0.0)).mean().item()
+        avg_group_relative_reward = experience.info.get("group_relative_reward", torch.tensor(0.0)).mean().item()
+        avg_group_reward_std = experience.info.get("group_reward_std", torch.tensor(0.0)).mean().item()
+
         del experience.info["num_actions"]
         del experience.info["custom_rewards"]
         del experience.info["reward"]
         experience.to_device("cpu")
 
-        # for replay buffer split batch
         num_packed_samples = len(num_actions)
         return_sums /= num_packed_samples
-        experience.info["response_length"] = torch.Tensor(experience.info["response_length"]).mean().unsqueeze(0)
-        experience.info["total_length"] = torch.Tensor(experience.info["total_length"]).mean().unsqueeze(0)
+        experience.info["response_length"] = torch.Tensor(experience.info["response_length"]).mean().unsqueeze(0) if not torch.is_tensor(experience.info["response_length"]) or experience.info["response_length"].dim() > 0 else experience.info["response_length"].unsqueeze(0)
+        experience.info["total_length"] = torch.Tensor(experience.info["total_length"]).mean().unsqueeze(0) if not torch.is_tensor(experience.info["total_length"]) or experience.info["total_length"].dim() > 0 else experience.info["total_length"].unsqueeze(0)
 
         metrics = {
+            "avg_custom_rewards": avg_custom_rewards,
+            "avg_response_length": avg_response_length,
+            "avg_advantages": experience.advantages.mean().item(),
+            "avg_advantages_abs": experience.advantages.abs().mean().item(),
+            "avg_group_raw_reward": avg_group_raw_reward,
+            "avg_group_relative_reward": avg_group_relative_reward,
+            "avg_group_reward_std": avg_group_reward_std,
         }
 
         return experience, metrics

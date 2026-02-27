@@ -1,8 +1,9 @@
 # ========================================= config for optimization process ==========================================
+# Paper reproduction config — aligned with CURE (arXiv:2506.03136v2) Section 4.1.2
+# Model: Qwen3-4B (long-CoT), 50 steps, N=M=16, CodeContests train/eval
+# Hardware: 2 GPUs (adapted from paper's 8×A100)
+# Backup of previous debug config: optimization_config_debug.py
 # ====================================================================================================================
-
-# experiment name — auto-generated as "{YYYYMMDD}_{HHMM}_{model_short}_{dataset}" if left empty
-exp_name = ""
 
 
 # the model you want to optimize
@@ -42,7 +43,7 @@ n_sample_per_step = 20
 
 # GPU usage for vllm inference
 # 2 GPUs: single engine with tensor-parallel=2
-gpu_groups = [[0,1],[2,3],[4,5],[6,7]]
+gpu_groups = [[0,1]]
 
 # max ground-truth unit test we can use here
 max_ground_truth_test = 8

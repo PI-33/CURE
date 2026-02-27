@@ -96,6 +96,9 @@ code_data = []
 case_data = []
 index_list = []
 
+raw_code_rewards_all = []
+raw_case_rewards_all = []
+
 for i in range(len(data)):
     if data[i]["all_case_bool_table"] is None:
         continue
@@ -106,6 +109,7 @@ for i in range(len(data)):
 
     # reward for code
     code_reward = np.mean(all_test_table_i, 1)
+    raw_code_rewards_all.extend(code_reward.tolist())
     code_reward = normalize_reward(code_reward)
     if code_reward is not None:
         if enable_efficient:
@@ -126,7 +130,7 @@ for i in range(len(data)):
             if len(group_entry["responses"]) > 0:
                 code_data.append(group_entry)
     
-    # reward for case
+    # reward for case (Eq. 4: μ_k estimator)
     correct_code_list = np.where(all_test_table_i.all(axis=1))[0].tolist()
     if len(correct_code_list) > 0:
         # get reward sign
@@ -157,6 +161,7 @@ for i in range(len(data)):
                 reward_scale[wrong_case_list] = reward_scale[wrong_case_list] * mean_p00
             case_reward = case_reward * reward_scale
         
+        raw_case_rewards_all.extend(case_reward.tolist())
         case_reward = normalize_reward(case_reward)
         if case_reward is not None:
             if enable_efficient:
@@ -191,5 +196,26 @@ else:
         json.dump(code_data, f, indent=2, ensure_ascii=False)
     with open("./temp_data/rl_case_data.json", "w", encoding="utf-8") as f:
         json.dump(case_data, f, indent=2, ensure_ascii=False)
+
+
+from termcolor import cprint
+
+os.makedirs(os.path.dirname("./results/results-" + outputs_name + ".txt"), exist_ok=True)
+with open("./results/results-" + outputs_name + ".txt", "a") as f:
+    def save_and_print(text):
+        cprint(text, color="cyan")
+        f.write(text + "\n")
+
+    raw_code_arr = np.array(raw_code_rewards_all) if raw_code_rewards_all else np.array([0.0])
+    raw_case_arr = np.array(raw_case_rewards_all) if raw_case_rewards_all else np.array([0.0])
+
+    save_and_print(
+        f"estimated_code_reward: mean={raw_code_arr.mean():.4f}, std={raw_code_arr.std():.4f}, "
+        f"num_groups={len(code_data)}, num_samples={len(raw_code_rewards_all)}"
+    )
+    save_and_print(
+        f"estimated_case_reward: mean={raw_case_arr.mean():.4f}, std={raw_case_arr.std():.4f}, "
+        f"num_groups={len(case_data)}, num_samples={len(raw_case_rewards_all)}"
+    )
 
 

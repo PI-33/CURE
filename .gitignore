@@ -2,9 +2,9 @@
 optimization/temp_data/
 optimization/ckpt/
 
-# Logs (keep directory structure but ignore content)
-logs/*.log
-logs/fail/
+# Logs
+logs/
+
 
 # Test results
 test_results/
@@ -37,3 +37,12 @@ Thumbs.db
 # Torch extensions cache
 *.so
 *.o
+
+# Experiment outputs (large checkpoints, tb logs, eval artifacts)
+experiments/*/optimization/ckpt/
+experiments/*/optimization/tb_logs/
+experiments/*/evaluation/
+experiments/*/train.log
+
+# Evaluation temp data
+evaluation/temp_data/

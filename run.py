@@ -1,17 +1,17 @@
 import os
 import sys
+import glob
+import shutil
 import subprocess
+from datetime import datetime
 from termcolor import cprint
 
 from optimization import optimization_config
 
 
-
-
 # if you are the first time to train the model, set this to be True.
 # if you have stopped the process and want to keep training, simply set this to be False and run this script.
 start_from_scratch = True
-
 
 
 eval_interval = optimization_config.eval_interval
@@ -32,6 +32,57 @@ eval_no_example = optimization_config.eval_no_example
 eval_max_test = optimization_config.eval_max_test
 
 
+# ===================== Experiment Directory Setup =====================
+
+def _build_exp_name():
+    raw = optimization_config.exp_name
+    if raw:
+        return raw
+    model_short = os.path.basename(pretrain_model.rstrip("/"))
+    ts = datetime.now().strftime("%Y%m%d_%H%M")
+    return f"{ts}_{model_short}_{train_dataset}"
+
+exp_name = _build_exp_name()
+exp_dir = os.path.join("experiments", exp_name)
+
+os.makedirs(os.path.join(exp_dir, "optimization", "results"), exist_ok=True)
+os.makedirs(os.path.join(exp_dir, "optimization", "tb_logs"), exist_ok=True)
+os.makedirs(os.path.join(exp_dir, "optimization", "ckpt"), exist_ok=True)
+os.makedirs(os.path.join(exp_dir, "evaluation", "results"), exist_ok=True)
+
+exp_tb_dir = os.path.abspath(os.path.join(exp_dir, "optimization", "tb_logs"))
+
+shutil.copy2("optimization/optimization_config.py",
+             os.path.join(exp_dir, "config_snapshot.py"))
+
+cprint(f"{'='*60}", color="yellow")
+cprint(f"  Experiment: {exp_name}", color="yellow")
+cprint(f"  Directory:  {os.path.abspath(exp_dir)}", color="yellow")
+cprint(f"{'='*60}", color="yellow")
+
+
+def archive_optimization_results():
+    for f in glob.glob("optimization/results/*.txt"):
+        shutil.copy2(f, os.path.join(exp_dir, "optimization", "results",
+                                     os.path.basename(f)))
+
+def archive_eval_results():
+    for f in glob.glob("evaluation/results/*.txt"):
+        shutil.copy2(f, os.path.join(exp_dir, "evaluation", "results",
+                                     os.path.basename(f)))
+
+def archive_log_symlink():
+    log_file = os.environ.get("CURE_LOG_FILE")
+    if log_file:
+        abs_log = os.path.abspath(log_file)
+        link_path = os.path.join(exp_dir, "train.log")
+        if os.path.lexists(link_path):
+            os.remove(link_path)
+        os.symlink(abs_log, link_path)
+
+
+# ===================== Pipeline Steps =====================
+
 def begin_with(file_name):
     with open(file_name, "w") as f:
         f.write("")
@@ -39,12 +90,9 @@ def begin_with(file_name):
 if start_from_scratch:
     os.makedirs("evaluation/results", exist_ok=True)
     os.makedirs("optimization/results", exist_ok=True)
-    #begin_with("evaluation/results/results-eval-" + pretrain_model.replace("/", ".") + "-" + eval_dataset + ".txt")
-    #begin_with("optimization/results/results-rl-" + pretrain_model.replace("/", ".") + "-" + train_dataset + ".txt")
     begin_with("evaluation/results/results-eval-" + model.replace("/", ".") + "-" + eval_dataset + ".txt")
     begin_with("optimization/results/results-rl-" + model.replace("/", ".") + "-" + train_dataset + ".txt")
 
-# evaluation
 def evaluation(model, eval_dataset, gpu_groups):
     cprint(f"This is the {i}-th step for evaluation.", color = "green")
     subprocess.run(
@@ -66,9 +114,8 @@ def evaluation(model, eval_dataset, gpu_groups):
         cwd='evaluation',
         check=True,
     )
+    archive_eval_results()
 
-
-# samlpe
 def sample(model):
     cprint(f"This is the {i}-th step for sampling.", color = "green")
     subprocess.run(
@@ -79,7 +126,6 @@ def sample(model):
         check=True,
     )
 
-# execute
 def execute(model):
     cprint(f"This is the {i}-th step for execution.", color = "green")
     subprocess.run(
@@ -90,7 +136,6 @@ def execute(model):
         check=True,
     )
 
-# assign reward
 def assign_reward(model):
     subprocess.run(
         f'python reward.py '
@@ -99,20 +144,20 @@ def assign_reward(model):
         cwd='optimization',
         check=True,
     )
+    archive_optimization_results()
 
-# train
 def train(model):
     cprint(f"This is the {i}-th step for training.", color = "green")
     subprocess.run(
         f'python -m train '
-        f'--pretrain {model} ',
+        f'--pretrain {model} '
+        f'--step {i} '
+        f'--tb_dir {exp_tb_dir} ',
         shell=True,
         cwd='optimization',
         check=True
     )
-    subprocess.run("rm -f optimization/ckpt/event*", shell=True, check=True)
 
-# save
 def save(model_from, model_to):
     os.makedirs(model_to, exist_ok=True)
     subprocess.run(f"rm -rf {model_to}/*", shell=True, check=True)
@@ -133,7 +178,8 @@ while i <= total_steps:
     if i % eval_interval == 0:
         evaluation(model, eval_dataset, gpu_groups)
     if i % save_interval == 0:
-        save(model, f"optimization/ckpt/iter{i}")
+        exp_ckpt = os.path.join(exp_dir, "optimization", "ckpt", f"iter{i}")
+        save(model, exp_ckpt)
 
     if i == total_steps:
         break
@@ -144,6 +190,18 @@ while i <= total_steps:
     train(model)
 
     i += 1
+
+# archive final model and log
+exp_final_ckpt = os.path.join(exp_dir, "optimization", "ckpt", "final")
+save(model, exp_final_ckpt)
+archive_optimization_results()
+archive_eval_results()
+archive_log_symlink()
+
+cprint(f"{'='*60}", color="yellow")
+cprint(f"  Experiment finished: {exp_name}", color="yellow")
+cprint(f"  All artifacts saved to: {os.path.abspath(exp_dir)}", color="yellow")
+cprint(f"{'='*60}", color="yellow")
 
 
 
