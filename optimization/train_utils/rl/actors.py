@@ -566,6 +566,7 @@ class PolicyRayActorBase(RayActor):
         if "group_raw_reward" in experience.info:
             status["group_raw_reward"] = experience.info["group_raw_reward"].mean().item()
             status["group_relative_reward"] = experience.info["group_relative_reward"].mean().item()
+            status["group_reward_std"] = experience.info["group_reward_std"].mean().item()
 
         return status
 

@@ -1,8 +1,20 @@
+import os
+import sys
+
+
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT_DIR not in sys.path:
+    sys.path.append(ROOT_DIR)
+
+from cure_profiles import apply_profile_overrides, get_active_profile
+
+
 # ========================================= config for optimization process ==========================================
 # ====================================================================================================================
 
 # experiment name — auto-generated as "{YYYYMMDD}_{HHMM}_{model_short}_{dataset}" if left empty
 exp_name = ""
+active_profile = get_active_profile()
 
 
 # the model you want to optimize
@@ -95,6 +107,28 @@ scale_tuple_list = [(4, 4), (16, 16)]
 # set True by default
 separate_training = True
 
+# new self-bootstrapped reward path
+use_self_bootstrap = True
+bootstrap_use_raw_outputs = True
+bootstrap_use_leave_one_out = True
+bootstrap_em_iterations = 3
+bootstrap_use_anchor = True
+bootstrap_anchor_strength = 0.35
+bootstrap_min_confidence = 0.20
+bootstrap_min_reliable_ratio = 0.25
+bootstrap_min_reliable_tests = 2
+bootstrap_duplicate_public_penalty = 0.5
+bootstrap_confidence_weight_power = 1.0
+bootstrap_util_weight = True
+bootstrap_log_gt_diagnostics = True
+bootstrap_hard_case_limit = 20
+bootstrap_reliable_non_error_only = True
+bootstrap_skip_zero_std = True
+bootstrap_min_disc = 0.05
+
+# structured report output
+structured_log_enabled = True
+
 # Paper Section 3.4: long-CoT model uses response-length-guided transformation
 # Qwen3-4B IS a long-CoT model, so enable_efficient = True
 enable_efficient = True
@@ -152,3 +186,6 @@ eval_scale_tuple_list = [(4, 4), (16, 16)]
 eval_num_chunks = 32
 eval_no_example = True
 eval_max_test = 8
+
+
+apply_profile_overrides("optimization", globals(), active_profile)

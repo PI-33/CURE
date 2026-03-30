@@ -27,6 +27,7 @@ from train_utils.utils import (
     masked_mean,
     normalize_advantages,
 )
+from reporting import append_jsonl, get_profile_name
 
 
 class RayPPOTrainer:
@@ -104,6 +105,25 @@ class RayPPOTrainer:
                     f"clip_ratio={train_status.get('clip_ratio', 0):.4f}, "
                     f"entropy={train_status.get('entropy', 0):.4f}, "
                     f"lr={train_status.get('actor_lr', 0):.2e}"
+                )
+                append_jsonl(
+                    "policy_metrics.jsonl",
+                    {
+                        "step": step_key,
+                        "profile": get_profile_name(),
+                        "tag": tag,
+                        "policy_loss": train_status.get("policy_loss", 0),
+                        "kl_loss": train_status.get("kl_loss", 0),
+                        "total_loss": train_status.get("total_loss", 0),
+                        "clip_ratio": train_status.get("clip_ratio", 0),
+                        "entropy": train_status.get("entropy", 0),
+                        "actor_lr": train_status.get("actor_lr", 0),
+                        "policy_update_steps": train_status.get("policy_update_steps", 0),
+                        "group_raw_reward": train_status.get("group_raw_reward", 0),
+                        "group_relative_reward": train_status.get("group_relative_reward", 0),
+                        "group_reward_std": train_status.get("group_reward_std", 0),
+                        "metric_type": "policy",
+                    },
                 )
                 self.writer.flush()
 
@@ -250,6 +270,22 @@ class RayPPOTrainer:
             f"avg_response_length={avg_response_length / n_exp:.1f}, "
             f"avg_group_raw_reward={avg_group_raw_reward / n_exp:.4f}, "
             f"avg_group_reward_std={avg_group_reward_std / n_exp:.4f}"
+        )
+        append_jsonl(
+            "policy_metrics.jsonl",
+            {
+                "step": step_key,
+                "profile": get_profile_name(),
+                "tag": tag,
+                "avg_custom_rewards": avg_custom_rewards / n_exp,
+                "avg_response_length": avg_response_length / n_exp,
+                "avg_advantages": avg_advantages / n_exp,
+                "avg_advantages_abs": avg_advantages_abs / n_exp,
+                "avg_group_raw_reward": avg_group_raw_reward / n_exp,
+                "avg_group_relative_reward": avg_group_relative_reward / n_exp,
+                "avg_group_reward_std": avg_group_reward_std / n_exp,
+                "metric_type": "experience",
+            },
         )
 
 
@@ -988,5 +1024,4 @@ class RayPPOTrainer:
             return warpped_reward_model_fn
         else:
             return None
-
 
