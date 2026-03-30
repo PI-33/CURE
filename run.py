@@ -19,7 +19,7 @@ start_from_scratch = True
 eval_interval = optimization_config.eval_interval
 save_interval = optimization_config.save_interval
 total_steps = optimization_config.total_steps
-profile_name = getattr(optimization_config, "active_profile", os.environ.get("CURE_PROFILE", "default"))
+profile_name = os.environ.get("CURE_PROFILE", "").strip()
 pretrain_model = optimization_config.pretrained_model
 model = os.path.abspath("") + "/optimization/ckpt/" +  optimization_config.optimized_model_name
 if start_from_scratch == False:
@@ -312,5 +312,3 @@ cprint(f"{'='*60}", color="yellow")
 cprint(f"  Experiment finished: {exp_name}", color="yellow")
 cprint(f"  All artifacts saved to: {os.path.abspath(exp_dir)}", color="yellow")
 cprint(f"{'='*60}", color="yellow")
-
-

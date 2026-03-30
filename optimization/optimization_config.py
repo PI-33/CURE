@@ -1,20 +1,8 @@
-import os
-import sys
-
-
-ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if ROOT_DIR not in sys.path:
-    sys.path.append(ROOT_DIR)
-
-from cure_profiles import apply_profile_overrides, get_active_profile
-
-
 # ========================================= config for optimization process ==========================================
 # ====================================================================================================================
 
 # experiment name — auto-generated as "{YYYYMMDD}_{HHMM}_{model_short}_{dataset}" if left empty
 exp_name = ""
-active_profile = get_active_profile()
 
 
 # the model you want to optimize
@@ -186,6 +174,3 @@ eval_scale_tuple_list = [(4, 4), (16, 16)]
 eval_num_chunks = 32
 eval_no_example = True
 eval_max_test = 8
-
-
-apply_profile_overrides("optimization", globals(), active_profile)

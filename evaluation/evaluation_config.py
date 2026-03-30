@@ -1,21 +1,9 @@
-import os
-import sys
-
-
-ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if ROOT_DIR not in sys.path:
-    sys.path.append(ROOT_DIR)
-
-from cure_profiles import apply_profile_overrides, get_active_profile
-
-
 # ========================  This is the config for evaluation  =========================
 # ======================================================================================
 
 
 # set True if you want to evaluate API model, set False for vllm inference model
 use_api = False
-active_profile = get_active_profile()
 
 # set to be True if you just want to evaluate the model's one-shot coding accuracy, set False if BoN performance is also wanted
 single_eval = True
@@ -149,10 +137,6 @@ Finally, after completing these previous thinking and derivation steps (you shou
 
 # some special requirements for code generation
 special_requirements = """You should use input() to input and print() to output in your script. Your code should output the results based on the input read in, rather than generating the given test example."""
-
-
-apply_profile_overrides("evaluation", globals(), active_profile)
-
 
 
 
