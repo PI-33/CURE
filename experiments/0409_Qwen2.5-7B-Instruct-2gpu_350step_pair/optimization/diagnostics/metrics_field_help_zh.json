@@ -1,0 +1,22 @@
+{
+  "sampling": {
+    "mean_code_response_tokens": "本步 vLLM 生成代码的平均 token 数（与日志 code response length 一致）。",
+    "mean_case_response_tokens": "本步生成单测相关文本的平均 token 数（与日志 case response length 一致）。"
+  },
+  "execution": {
+    "code_acc": "题目维度：至少有一份生成代码在全部 GT 私有测试上通过的题目占比。",
+    "code_accumulate_acc": "所有「生成代码 × GT 测试」对上，执行输出与期望一致的比例。",
+    "case_acc": "仅在存在「全对 GT 的代码」的题目上统计：生成测试能区分/匹配好代码的题目级比例。",
+    "case_accumulate_acc": "在好代码与生成测试的交叉上，执行是否一致的比例。",
+    "p_01_as_logged": "日志中 p_01 行打印的值，等于 1−(内部 p_01)：错误代码在「好测试」上仍通过的比例相关量。",
+    "p_00": "错误代码与错误测试组合上，执行仍判为通过的比例。",
+    "bon_by_scale": "Best-of-N：从前 num_code 份代码、num_gen_tests 份生成测试中按生成测试得分选最优代码，再在 GT 上算的 acc / accumulate_acc。"
+  },
+  "reward": {
+    "reward_mode": "gt_based | self_bootstrap | pairwise_disagreement（见 optimization_config.reward_mode）。",
+    "code_reward / case_reward": "本步写入 RL json 的原始 reward 在组内归一化前的统计（mean/std/组数/样本数）。",
+    "problems": "本步参与 reward 的题目总数、实际使用数、跳过数（自举时低信心等会 skip）。",
+    "gt_correlation": "自举得到的 code reward 与 GT-based code reward 的 Spearman 相关（仅诊断，不参与训练）。",
+    "rollout_debug_meta": "是否在 reward_diagnostics 里嵌入大段 rollout（默认关；开则 temp 文件会很大）。"
+  }
+}

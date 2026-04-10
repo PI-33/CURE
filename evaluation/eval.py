@@ -21,6 +21,43 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import evaluation_config
 
 
+def _eval_experiment_dir():
+    d = os.environ.get("CURE_EXPERIMENT_DIR")
+    return os.path.abspath(d) if d else None
+
+
+def eval_temp_data_dir():
+    e = _eval_experiment_dir()
+    d = (
+        os.path.join(e, "evaluation", "temp_data")
+        if e
+        else os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp_data")
+    )
+    os.makedirs(d, exist_ok=True)
+    return d
+
+
+def eval_results_dir():
+    e = _eval_experiment_dir()
+    d = (
+        os.path.join(e, "evaluation", "results")
+        if e
+        else os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
+    )
+    os.makedirs(d, exist_ok=True)
+    return d
+
+
+def _resolve_sanitized_json_path(primary: str) -> str:
+    """与 optimization/runtime_paths.resolve_path_after_parent_rename 一致：兼容 grpo→vllm 目录迁移后旧文件名。"""
+    if os.path.isfile(primary):
+        return primary
+    if "zpy3.vllm." in primary:
+        legacy = primary.replace("zpy3.vllm.", "zpy3.grpo.")
+        if os.path.isfile(legacy):
+            return legacy
+    return primary
+
 
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false" 
@@ -555,8 +592,10 @@ for full_output in case_generation_result:
     i += 1
 
 # output the data
-os.makedirs(os.path.dirname("./temp_data/outputs-" + outputs_name + ".json"), exist_ok=True)
-with open("./temp_data/outputs-" + outputs_name + ".json", "w", encoding="utf-8") as f:
+_etd = eval_temp_data_dir()
+_out_gen = os.path.join(_etd, "outputs-" + outputs_name + ".json")
+os.makedirs(os.path.dirname(_out_gen), exist_ok=True)
+with open(_out_gen, "w", encoding="utf-8") as f:
     json.dump(data, f, indent=2, ensure_ascii=False)
 
 
@@ -686,7 +725,11 @@ def run_scripts_with_chunk(code_list, test_input_list, time_limit_list, worker, 
 
 def execute_scripts(outputs_name, num_chunks):
 
-    with open("./temp_data/outputs-" + outputs_name + '.json', 'r') as f:
+    _etd = eval_temp_data_dir()
+    _in_eval = _resolve_sanitized_json_path(
+        os.path.join(_etd, "outputs-" + outputs_name + ".json")
+    )
+    with open(_in_eval, "r") as f:
         data = json.load(f)
     
     # process cases
@@ -859,13 +902,18 @@ def execute_scripts(outputs_name, num_chunks):
             assert int(all(sub_test_table_i)) / 1 <= np.sum(sub_test_table_i).item() / len(sub_test_table_i), "error"
             index_id += 1
     
+    _erd = eval_results_dir()
     if is_final_eval:
         if use_api == False:
-            outputs_result_name = "./results/results-eval-" + pretrained_model.replace("/", ".") + "-final_eval.txt"
+            outputs_result_name = os.path.join(
+                _erd, "results-eval-" + pretrained_model.replace("/", ".") + "-final_eval.txt"
+            )
         else:
-            outputs_result_name = "./results/results-eval-" + api_model_name.replace("/", ".") + "-final_eval.txt"
+            outputs_result_name = os.path.join(
+                _erd, "results-eval-" + api_model_name.replace("/", ".") + "-final_eval.txt"
+            )
     else:
-        outputs_result_name = "./results/results-" + outputs_name + ".txt"
+        outputs_result_name = os.path.join(_erd, "results-" + outputs_name + ".txt")
     os.makedirs(os.path.dirname(outputs_result_name), exist_ok=True)
     with open(outputs_result_name, "a") as f:
         # Save + print
@@ -917,7 +965,7 @@ def execute_scripts(outputs_name, num_chunks):
         data[i]["test_bool_table"] = data[i]["test_bool_table"].tolist()
 
     # output the data
-    with open("./temp_data/outputs-" + outputs_name + ".json", "w", encoding="utf-8") as f:
+    with open(os.path.join(_etd, "outputs-" + outputs_name + ".json"), "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 

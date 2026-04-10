@@ -1,0 +1,5 @@
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.3097, std=0.4179, num_groups=80, num_samples=1600
+estimated_case_reward: mean=0.4989, std=0.3587, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.5434, n=76

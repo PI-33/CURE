@@ -1,0 +1,22 @@
+{
+  "code_acc": 0.174375,
+  "code_accumulate_acc": 0.26635220125786163,
+  "case_acc": 0.5069444444444444,
+  "case_accumulate_acc": 0.6050627240143369,
+  "p_01_as_logged": 0.2779168753129695,
+  "p_00": 0.06134301270417423,
+  "bon_by_scale": [
+    {
+      "num_code": 4,
+      "num_gen_tests": 4,
+      "acc": 0.23,
+      "accumulate_acc": 0.3559748427672956
+    },
+    {
+      "num_code": 16,
+      "num_gen_tests": 16,
+      "acc": 0.26,
+      "accumulate_acc": 0.4
+    }
+  ]
+}

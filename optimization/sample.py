@@ -11,6 +11,7 @@ from vllm import LLM, SamplingParams
 from transformers import AutoTokenizer
 
 import optimization_config
+from runtime_paths import temp_data_dir, optimization_results_dir
 
 
 
@@ -32,7 +33,7 @@ def worker_fn(pretrained_model, gpu_ids, task_queue, result_queue, max_model_len
         model=pretrained_model,
         dtype="bfloat16",
         tensor_parallel_size=len(gpu_ids),
-        gpu_memory_utilization=0.85,
+        gpu_memory_utilization=0.5,
         max_model_len=max_model_len
     )
 
@@ -370,14 +371,27 @@ case_response_length = get_token_lengths(case_generation_result, tokenizer)
 mean_code = sum(code_response_length)/len(code_response_length)
 mean_case = sum(case_response_length)/len(case_response_length)
 
-os.makedirs(os.path.dirname("./results/results-" + outputs_name + ".txt"), exist_ok=True)
-with open("./results/results-" + outputs_name + ".txt", "a") as f:
+_res_dir = optimization_results_dir()
+_results_txt = os.path.join(_res_dir, "results-" + outputs_name + ".txt")
+os.makedirs(os.path.dirname(_results_txt), exist_ok=True)
+with open(_results_txt, "a") as f:
     # Save + print
     def save_and_print(text):
         cprint(text, color="green")
         f.write(text + "\n")
     save_and_print(f"code response length: {mean_code}, case response length: {mean_case}")
 
+_td = temp_data_dir()
+with open(os.path.join(_td, "last_step_sample_metrics.json"), "w", encoding="utf-8") as _sf:
+    json.dump(
+        {
+            "mean_code_response_tokens": float(mean_code),
+            "mean_case_response_tokens": float(mean_case),
+        },
+        _sf,
+        indent=2,
+        ensure_ascii=False,
+    )
 
 
 
@@ -407,8 +421,9 @@ for full_output in case_generation_result:
     i += 1
 
 # output the data
-os.makedirs(os.path.dirname("./temp_data/outputs-" + outputs_name + ".json"), exist_ok=True)
-with open("./temp_data/outputs-" + outputs_name + ".json", "w", encoding="utf-8") as f:
+_out_json = os.path.join(_td, "outputs-" + outputs_name + ".json")
+os.makedirs(os.path.dirname(_out_json), exist_ok=True)
+with open(_out_json, "w", encoding="utf-8") as f:
     json.dump(data, f, indent=2, ensure_ascii=False)
 
 

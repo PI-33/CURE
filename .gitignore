@@ -39,10 +39,20 @@ Thumbs.db
 *.o
 
 # Experiment outputs (large checkpoints, tb logs, eval artifacts)
+# Per-run HF checkpoint copies live at experiments/<name>/ckpt/<optimized_model_name>/
+experiments/*/ckpt/
 experiments/*/optimization/ckpt/
 experiments/*/optimization/tb_logs/
 experiments/*/evaluation/
 experiments/*/train.log
+
+# Model weight blobs (HF shards, PyTorch, etc.) anywhere under CURE
+**/*.safetensors
+**/*.pt
+**/*.pth
+**/*.ckpt
+**/*.gguf
+**/pytorch_model*.bin
 
 # Evaluation temp data
 evaluation/temp_data/

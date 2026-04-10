@@ -1,0 +1,5 @@
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7834, std=0.3312, num_groups=75, num_samples=1200
+estimated_case_reward: mean=-0.0292, std=0.4357, num_groups=75, num_samples=1200
+self_bootstrap_stats: total_problems=100, skipped=25, used=75
+gt_correlation(code_reward): mean_spearman=0.1254, n=65

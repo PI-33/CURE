@@ -1,0 +1,6 @@
+diagnostics_dir=/mnt/shared-storage-user/zhupengyu1/zpy3/vllm/CURE/experiments/04031200_Qwen2.5-7B-Instruct_2gpu_350step_em/optimization/diagnostics
+num_steps=350
+num_columns=32
+num_plots=27
+csv=/mnt/shared-storage-user/zhupengyu1/zpy3/vllm/CURE/analysis/em_04031200_output/em_step_metrics_wide.csv
+charts_dir=/mnt/shared-storage-user/zhupengyu1/zpy3/vllm/CURE/analysis/em_04031200_output

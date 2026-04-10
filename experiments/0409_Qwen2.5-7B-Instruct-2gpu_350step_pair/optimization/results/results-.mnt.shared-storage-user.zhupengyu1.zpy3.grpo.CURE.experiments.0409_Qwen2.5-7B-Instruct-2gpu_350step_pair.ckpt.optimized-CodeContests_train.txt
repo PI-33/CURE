@@ -1,0 +1,100 @@
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.2888, std=0.4060, num_groups=76, num_samples=1600
+estimated_case_reward: mean=0.5737, std=0.3395, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.4907, n=73
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.2823, std=0.4033, num_groups=78, num_samples=1600
+estimated_case_reward: mean=0.5977, std=0.3457, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.4780, n=74
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.2342, std=0.3807, num_groups=71, num_samples=1600
+estimated_case_reward: mean=0.6222, std=0.3143, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.5266, n=71
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.3302, std=0.4164, num_groups=81, num_samples=1600
+estimated_case_reward: mean=0.5509, std=0.3407, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.4936, n=76
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.3461, std=0.4449, num_groups=74, num_samples=1600
+estimated_case_reward: mean=0.5395, std=0.3315, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.4588, n=70
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.2816, std=0.4103, num_groups=77, num_samples=1600
+estimated_case_reward: mean=0.6705, std=0.3308, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.4600, n=72
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.3145, std=0.4173, num_groups=80, num_samples=1600
+estimated_case_reward: mean=0.6077, std=0.3381, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.3703, n=73
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.2496, std=0.3847, num_groups=74, num_samples=1600
+estimated_case_reward: mean=0.6706, std=0.2909, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.4607, n=74
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.3236, std=0.4237, num_groups=73, num_samples=1600
+estimated_case_reward: mean=0.6068, std=0.3247, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.5724, n=69
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.2921, std=0.4220, num_groups=74, num_samples=1600
+estimated_case_reward: mean=0.6469, std=0.3140, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.4747, n=70
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.3641, std=0.4180, num_groups=83, num_samples=1600
+estimated_case_reward: mean=0.6076, std=0.3118, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.3895, n=76
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.3139, std=0.4236, num_groups=80, num_samples=1600
+estimated_case_reward: mean=0.6435, std=0.3230, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.4543, n=76
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.2670, std=0.4019, num_groups=73, num_samples=1600
+estimated_case_reward: mean=0.6615, std=0.3089, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.4098, n=69
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.2913, std=0.4218, num_groups=68, num_samples=1600
+estimated_case_reward: mean=0.6287, std=0.3448, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.4052, n=60
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.2758, std=0.3986, num_groups=77, num_samples=1600
+estimated_case_reward: mean=0.6608, std=0.3063, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.4625, n=75
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.3150, std=0.4086, num_groups=77, num_samples=1600
+estimated_case_reward: mean=0.6394, std=0.3396, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.5173, n=73
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.3086, std=0.4188, num_groups=76, num_samples=1600
+estimated_case_reward: mean=0.6395, std=0.3187, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.4303, n=70
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.3215, std=0.4260, num_groups=73, num_samples=1600
+estimated_case_reward: mean=0.6624, std=0.3304, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.4956, n=66
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.2745, std=0.3841, num_groups=81, num_samples=1600
+estimated_case_reward: mean=0.6518, std=0.3312, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.2677, n=75
+reward_mode: pairwise_disagreement
+estimated_code_reward: mean=0.3361, std=0.4365, num_groups=77, num_samples=1600
+estimated_case_reward: mean=0.6518, std=0.3101, num_groups=100, num_samples=1600
+self_bootstrap_stats: total_problems=100, skipped=0, used=100
+gt_correlation(code_reward): mean_spearman=-0.4854, n=72

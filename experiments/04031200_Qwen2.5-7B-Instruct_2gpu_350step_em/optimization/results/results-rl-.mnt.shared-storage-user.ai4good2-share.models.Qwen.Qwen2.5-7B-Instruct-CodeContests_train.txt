@@ -1,0 +1,9 @@
+code response length: 677.820625, case response length: 769.803125
+code acc: 0.140625, code accumulate acc: 0.2309375
+case acc: 0.22983870967741934, case accumulate acc: 0.28305555555555556
+p_01: 0.3033838973162194
+p_00: 0.03822937625754527
+BoN setting (4, 4):
+acc: 0.15, accumulate acc: 0.25125
+BoN setting (16, 16):
+acc: 0.19, accumulate acc: 0.31875

@@ -1,0 +1,1745 @@
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7654, std=0.3624, num_groups=70, num_samples=1120
+estimated_case_reward: mean=-0.0182, std=0.4135, num_groups=70, num_samples=1120
+self_bootstrap_stats: total_problems=100, skipped=30, used=70
+gt_correlation(code_reward): mean_spearman=0.0691, n=59
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7884, std=0.3351, num_groups=72, num_samples=1152
+estimated_case_reward: mean=-0.0197, std=0.4521, num_groups=72, num_samples=1152
+self_bootstrap_stats: total_problems=100, skipped=28, used=72
+gt_correlation(code_reward): mean_spearman=0.0874, n=64
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7733, std=0.3494, num_groups=72, num_samples=1152
+estimated_case_reward: mean=0.0045, std=0.3821, num_groups=72, num_samples=1152
+self_bootstrap_stats: total_problems=100, skipped=28, used=72
+gt_correlation(code_reward): mean_spearman=0.2158, n=64
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7557, std=0.3637, num_groups=74, num_samples=1184
+estimated_case_reward: mean=-0.0138, std=0.3986, num_groups=74, num_samples=1184
+self_bootstrap_stats: total_problems=100, skipped=26, used=74
+gt_correlation(code_reward): mean_spearman=0.1102, n=60
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8019, std=0.3419, num_groups=74, num_samples=1184
+estimated_case_reward: mean=-0.0426, std=0.3943, num_groups=74, num_samples=1184
+self_bootstrap_stats: total_problems=100, skipped=26, used=74
+gt_correlation(code_reward): mean_spearman=0.1002, n=62
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7729, std=0.3556, num_groups=65, num_samples=1040
+estimated_case_reward: mean=0.0012, std=0.3933, num_groups=65, num_samples=1040
+self_bootstrap_stats: total_problems=100, skipped=35, used=65
+gt_correlation(code_reward): mean_spearman=0.1831, n=51
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7663, std=0.3554, num_groups=76, num_samples=1216
+estimated_case_reward: mean=-0.0009, std=0.4065, num_groups=76, num_samples=1216
+self_bootstrap_stats: total_problems=100, skipped=24, used=76
+gt_correlation(code_reward): mean_spearman=0.1461, n=64
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8029, std=0.3362, num_groups=74, num_samples=1184
+estimated_case_reward: mean=-0.0181, std=0.3717, num_groups=74, num_samples=1184
+self_bootstrap_stats: total_problems=100, skipped=26, used=74
+gt_correlation(code_reward): mean_spearman=0.1531, n=58
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7668, std=0.3655, num_groups=70, num_samples=1120
+estimated_case_reward: mean=-0.0043, std=0.3889, num_groups=70, num_samples=1120
+self_bootstrap_stats: total_problems=100, skipped=30, used=70
+gt_correlation(code_reward): mean_spearman=0.1766, n=64
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7868, std=0.3592, num_groups=71, num_samples=1136
+estimated_case_reward: mean=-0.0089, std=0.3651, num_groups=71, num_samples=1136
+self_bootstrap_stats: total_problems=100, skipped=29, used=71
+gt_correlation(code_reward): mean_spearman=0.1010, n=63
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7804, std=0.3688, num_groups=69, num_samples=1104
+estimated_case_reward: mean=-0.0492, std=0.3333, num_groups=69, num_samples=1104
+self_bootstrap_stats: total_problems=100, skipped=31, used=69
+gt_correlation(code_reward): mean_spearman=-0.0258, n=55
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7968, std=0.3581, num_groups=60, num_samples=960
+estimated_case_reward: mean=-0.0487, std=0.3352, num_groups=60, num_samples=960
+self_bootstrap_stats: total_problems=100, skipped=40, used=60
+gt_correlation(code_reward): mean_spearman=0.0781, n=48
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7684, std=0.3875, num_groups=58, num_samples=928
+estimated_case_reward: mean=-0.0099, std=0.3280, num_groups=58, num_samples=928
+self_bootstrap_stats: total_problems=100, skipped=42, used=58
+gt_correlation(code_reward): mean_spearman=0.1589, n=47
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7744, std=0.3788, num_groups=52, num_samples=832
+estimated_case_reward: mean=0.0031, std=0.3183, num_groups=52, num_samples=832
+self_bootstrap_stats: total_problems=100, skipped=48, used=52
+gt_correlation(code_reward): mean_spearman=0.2605, n=45
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8027, std=0.3635, num_groups=51, num_samples=816
+estimated_case_reward: mean=-0.0278, std=0.2873, num_groups=51, num_samples=816
+self_bootstrap_stats: total_problems=100, skipped=49, used=51
+gt_correlation(code_reward): mean_spearman=0.0653, n=44
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8402, std=0.3418, num_groups=42, num_samples=672
+estimated_case_reward: mean=-0.0376, std=0.2808, num_groups=42, num_samples=672
+self_bootstrap_stats: total_problems=100, skipped=58, used=42
+gt_correlation(code_reward): mean_spearman=0.0534, n=38
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8173, std=0.3578, num_groups=42, num_samples=672
+estimated_case_reward: mean=-0.0447, std=0.2828, num_groups=42, num_samples=672
+self_bootstrap_stats: total_problems=100, skipped=58, used=42
+gt_correlation(code_reward): mean_spearman=-0.2131, n=34
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8074, std=0.3800, num_groups=30, num_samples=480
+estimated_case_reward: mean=-0.0068, std=0.2776, num_groups=30, num_samples=480
+self_bootstrap_stats: total_problems=100, skipped=70, used=30
+gt_correlation(code_reward): mean_spearman=0.2932, n=26
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7985, std=0.3781, num_groups=26, num_samples=416
+estimated_case_reward: mean=-0.0385, std=0.3009, num_groups=26, num_samples=416
+self_bootstrap_stats: total_problems=100, skipped=74, used=26
+gt_correlation(code_reward): mean_spearman=0.0234, n=23
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8566, std=0.3350, num_groups=25, num_samples=400
+estimated_case_reward: mean=-0.0452, std=0.2868, num_groups=25, num_samples=400
+self_bootstrap_stats: total_problems=100, skipped=75, used=25
+gt_correlation(code_reward): mean_spearman=0.1012, n=18
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8382, std=0.3454, num_groups=18, num_samples=288
+estimated_case_reward: mean=-0.0082, std=0.2578, num_groups=18, num_samples=288
+self_bootstrap_stats: total_problems=100, skipped=82, used=18
+gt_correlation(code_reward): mean_spearman=0.1720, n=14
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8251, std=0.3730, num_groups=30, num_samples=480
+estimated_case_reward: mean=-0.0043, std=0.2991, num_groups=30, num_samples=480
+self_bootstrap_stats: total_problems=100, skipped=70, used=30
+gt_correlation(code_reward): mean_spearman=0.1090, n=24
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8127, std=0.3676, num_groups=46, num_samples=736
+estimated_case_reward: mean=-0.0319, std=0.2970, num_groups=46, num_samples=736
+self_bootstrap_stats: total_problems=100, skipped=54, used=46
+gt_correlation(code_reward): mean_spearman=-0.0131, n=40
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8183, std=0.3804, num_groups=26, num_samples=416
+estimated_case_reward: mean=-0.0243, std=0.2839, num_groups=26, num_samples=416
+self_bootstrap_stats: total_problems=100, skipped=74, used=26
+gt_correlation(code_reward): mean_spearman=0.0554, n=20
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8187, std=0.3797, num_groups=35, num_samples=560
+estimated_case_reward: mean=-0.0429, std=0.2746, num_groups=35, num_samples=560
+self_bootstrap_stats: total_problems=100, skipped=65, used=35
+gt_correlation(code_reward): mean_spearman=0.0427, n=32
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8035, std=0.3806, num_groups=35, num_samples=560
+estimated_case_reward: mean=-0.0274, std=0.2672, num_groups=35, num_samples=560
+self_bootstrap_stats: total_problems=100, skipped=65, used=35
+gt_correlation(code_reward): mean_spearman=0.0978, n=30
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7285, std=0.4253, num_groups=19, num_samples=304
+estimated_case_reward: mean=0.0112, std=0.3143, num_groups=19, num_samples=304
+self_bootstrap_stats: total_problems=100, skipped=81, used=19
+gt_correlation(code_reward): mean_spearman=0.4988, n=17
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8012, std=0.3851, num_groups=16, num_samples=256
+estimated_case_reward: mean=-0.0538, std=0.3000, num_groups=16, num_samples=256
+self_bootstrap_stats: total_problems=100, skipped=84, used=16
+gt_correlation(code_reward): mean_spearman=-0.1573, n=15
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8365, std=0.3597, num_groups=19, num_samples=304
+estimated_case_reward: mean=-0.0123, std=0.2579, num_groups=19, num_samples=304
+self_bootstrap_stats: total_problems=100, skipped=81, used=19
+gt_correlation(code_reward): mean_spearman=0.2002, n=17
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8065, std=0.3880, num_groups=14, num_samples=224
+estimated_case_reward: mean=-0.0619, std=0.2770, num_groups=14, num_samples=224
+self_bootstrap_stats: total_problems=100, skipped=86, used=14
+gt_correlation(code_reward): mean_spearman=-0.2569, n=12
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8438, std=0.3631, num_groups=4, num_samples=64
+estimated_case_reward: mean=-0.0733, std=0.2522, num_groups=4, num_samples=64
+self_bootstrap_stats: total_problems=100, skipped=96, used=4
+gt_correlation(code_reward): mean_spearman=0.1274, n=4
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9141, std=0.2803, num_groups=8, num_samples=128
+estimated_case_reward: mean=-0.0671, std=0.2744, num_groups=8, num_samples=128
+self_bootstrap_stats: total_problems=100, skipped=92, used=8
+gt_correlation(code_reward): mean_spearman=0.6585, n=3
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8743, std=0.3243, num_groups=13, num_samples=208
+estimated_case_reward: mean=-0.0695, std=0.2968, num_groups=13, num_samples=208
+self_bootstrap_stats: total_problems=100, skipped=87, used=13
+gt_correlation(code_reward): mean_spearman=0.0587, n=9
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8750, std=0.3281, num_groups=18, num_samples=288
+estimated_case_reward: mean=-0.0167, std=0.2480, num_groups=18, num_samples=288
+self_bootstrap_stats: total_problems=100, skipped=82, used=18
+gt_correlation(code_reward): mean_spearman=0.3335, n=12
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8218, std=0.3762, num_groups=16, num_samples=256
+estimated_case_reward: mean=-0.0436, std=0.2869, num_groups=16, num_samples=256
+self_bootstrap_stats: total_problems=100, skipped=84, used=16
+gt_correlation(code_reward): mean_spearman=0.0710, n=10
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8511, std=0.3370, num_groups=16, num_samples=256
+estimated_case_reward: mean=-0.0610, std=0.2697, num_groups=16, num_samples=256
+self_bootstrap_stats: total_problems=100, skipped=84, used=16
+gt_correlation(code_reward): mean_spearman=0.1005, n=13
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7778, std=0.3943, num_groups=9, num_samples=144
+estimated_case_reward: mean=-0.0551, std=0.2992, num_groups=9, num_samples=144
+self_bootstrap_stats: total_problems=100, skipped=91, used=9
+gt_correlation(code_reward): mean_spearman=0.0088, n=7
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8761, std=0.3153, num_groups=11, num_samples=176
+estimated_case_reward: mean=-0.0822, std=0.2709, num_groups=11, num_samples=176
+self_bootstrap_stats: total_problems=100, skipped=89, used=11
+gt_correlation(code_reward): mean_spearman=-0.1307, n=6
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8125, std=0.3903, num_groups=8, num_samples=128
+estimated_case_reward: mean=0.0089, std=0.3141, num_groups=8, num_samples=128
+self_bootstrap_stats: total_problems=100, skipped=92, used=8
+gt_correlation(code_reward): mean_spearman=0.2360, n=6
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7500, std=0.4146, num_groups=2, num_samples=32
+estimated_case_reward: mean=0.0872, std=0.2714, num_groups=2, num_samples=32
+self_bootstrap_stats: total_problems=100, skipped=98, used=2
+gt_correlation(code_reward): mean_spearman=0.7993, n=2
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7854, std=0.4047, num_groups=9, num_samples=144
+estimated_case_reward: mean=-0.0321, std=0.2580, num_groups=9, num_samples=144
+self_bootstrap_stats: total_problems=100, skipped=91, used=9
+gt_correlation(code_reward): mean_spearman=0.0684, n=8
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7266, std=0.4457, num_groups=16, num_samples=256
+estimated_case_reward: mean=0.0195, std=0.2677, num_groups=16, num_samples=256
+self_bootstrap_stats: total_problems=100, skipped=84, used=16
+gt_correlation(code_reward): mean_spearman=0.3754, n=14
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8970, std=0.2940, num_groups=14, num_samples=224
+estimated_case_reward: mean=-0.0545, std=0.2397, num_groups=14, num_samples=224
+self_bootstrap_stats: total_problems=100, skipped=86, used=14
+gt_correlation(code_reward): mean_spearman=-0.2166, n=8
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9089, std=0.2848, num_groups=8, num_samples=128
+estimated_case_reward: mean=-0.0711, std=0.2758, num_groups=8, num_samples=128
+self_bootstrap_stats: total_problems=100, skipped=92, used=8
+gt_correlation(code_reward): mean_spearman=-0.1204, n=7
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8688, std=0.3218, num_groups=10, num_samples=160
+estimated_case_reward: mean=-0.0343, std=0.2271, num_groups=10, num_samples=160
+self_bootstrap_stats: total_problems=100, skipped=90, used=10
+gt_correlation(code_reward): mean_spearman=-0.1027, n=9
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9250, std=0.2634, num_groups=5, num_samples=80
+estimated_case_reward: mean=-0.0592, std=0.2300, num_groups=5, num_samples=80
+self_bootstrap_stats: total_problems=100, skipped=95, used=5
+gt_correlation(code_reward): mean_spearman=0.2596, n=3
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8790, std=0.3021, num_groups=8, num_samples=128
+estimated_case_reward: mean=-0.0072, std=0.2826, num_groups=8, num_samples=128
+self_bootstrap_stats: total_problems=100, skipped=92, used=8
+gt_correlation(code_reward): mean_spearman=0.1374, n=6
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8611, std=0.3458, num_groups=9, num_samples=144
+estimated_case_reward: mean=-0.0674, std=0.2470, num_groups=9, num_samples=144
+self_bootstrap_stats: total_problems=100, skipped=91, used=9
+gt_correlation(code_reward): mean_spearman=-0.3488, n=5
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8913, std=0.2909, num_groups=5, num_samples=80
+estimated_case_reward: mean=-0.0820, std=0.2660, num_groups=5, num_samples=80
+self_bootstrap_stats: total_problems=100, skipped=95, used=5
+gt_correlation(code_reward): mean_spearman=0.4633, n=4
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8438, std=0.3631, num_groups=4, num_samples=64
+estimated_case_reward: mean=-0.0174, std=0.2681, num_groups=4, num_samples=64
+self_bootstrap_stats: total_problems=100, skipped=96, used=4
+gt_correlation(code_reward): mean_spearman=0.0460, n=3
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7812, std=0.4134, num_groups=2, num_samples=32
+estimated_case_reward: mean=0.0003, std=0.2390, num_groups=2, num_samples=32
+self_bootstrap_stats: total_problems=100, skipped=98, used=2
+gt_correlation(code_reward): mean_spearman=-0.4984, n=2
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7857, std=0.4103, num_groups=7, num_samples=112
+estimated_case_reward: mean=-0.0369, std=0.2927, num_groups=7, num_samples=112
+self_bootstrap_stats: total_problems=100, skipped=93, used=7
+gt_correlation(code_reward): mean_spearman=0.2984, n=4
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7975, std=0.3788, num_groups=5, num_samples=80
+estimated_case_reward: mean=0.0074, std=0.3052, num_groups=5, num_samples=80
+self_bootstrap_stats: total_problems=100, skipped=95, used=5
+gt_correlation(code_reward): mean_spearman=0.2484, n=4
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8750, std=0.3307, num_groups=4, num_samples=64
+estimated_case_reward: mean=-0.0781, std=0.2684, num_groups=4, num_samples=64
+self_bootstrap_stats: total_problems=100, skipped=96, used=4
+gt_correlation(code_reward): mean_spearman=-0.2683, n=3
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8750, std=0.3307, num_groups=5, num_samples=80
+estimated_case_reward: mean=-0.0623, std=0.2412, num_groups=5, num_samples=80
+self_bootstrap_stats: total_problems=100, skipped=95, used=5
+gt_correlation(code_reward): mean_spearman=-0.1813, n=4
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8571, std=0.3499, num_groups=7, num_samples=112
+estimated_case_reward: mean=-0.0578, std=0.2627, num_groups=7, num_samples=112
+self_bootstrap_stats: total_problems=100, skipped=93, used=7
+gt_correlation(code_reward): mean_spearman=-0.0046, n=5
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=4, num_samples=64
+estimated_case_reward: mean=-0.0889, std=0.2771, num_groups=4, num_samples=64
+self_bootstrap_stats: total_problems=100, skipped=96, used=4
+gt_correlation(code_reward): mean_spearman=-0.2698, n=3
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.6875, std=0.4635, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0596, std=0.2309, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=-0.5760, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8958, std=0.3055, num_groups=3, num_samples=48
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=3, num_samples=48
+self_bootstrap_stats: total_problems=100, skipped=97, used=3
+gt_correlation(code_reward): mean_spearman=-0.3779, n=2
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7500, std=0.4330, num_groups=3, num_samples=48
+estimated_case_reward: mean=-0.0619, std=0.2396, num_groups=3, num_samples=48
+self_bootstrap_stats: total_problems=100, skipped=97, used=3
+gt_correlation(code_reward): mean_spearman=-0.6063, n=3
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0547, std=0.2120, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=0.1475, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7188, std=0.4496, num_groups=2, num_samples=32
+estimated_case_reward: mean=0.0000, std=0.2500, num_groups=2, num_samples=32
+self_bootstrap_stats: total_problems=100, skipped=98, used=2
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8750, std=0.3307, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=-0.5955, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0509, std=0.1971, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=0.2202, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7625, std=0.4256, num_groups=5, num_samples=80
+estimated_case_reward: mean=-0.0966, std=0.2902, num_groups=5, num_samples=80
+self_bootstrap_stats: total_problems=100, skipped=95, used=5
+gt_correlation(code_reward): mean_spearman=-0.1576, n=4
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8229, std=0.3817, num_groups=6, num_samples=96
+estimated_case_reward: mean=-0.0394, std=0.2383, num_groups=6, num_samples=96
+self_bootstrap_stats: total_problems=100, skipped=94, used=6
+gt_correlation(code_reward): mean_spearman=0.3974, n=3
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=2, num_samples=32
+estimated_case_reward: mean=-0.1818, std=0.3795, num_groups=2, num_samples=32
+self_bootstrap_stats: total_problems=100, skipped=98, used=2
+gt_correlation(code_reward): mean_spearman=0.1741, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8438, std=0.3631, num_groups=2, num_samples=32
+estimated_case_reward: mean=0.0000, std=0.2500, num_groups=2, num_samples=32
+self_bootstrap_stats: total_problems=100, skipped=98, used=2
+gt_correlation(code_reward): mean_spearman=1.0000, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=2, num_samples=32
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=2, num_samples=32
+self_bootstrap_stats: total_problems=100, skipped=98, used=2
+gt_correlation(code_reward): mean_spearman=0.2000, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8750, std=0.3307, num_groups=4, num_samples=64
+estimated_case_reward: mean=-0.0611, std=0.2954, num_groups=4, num_samples=64
+self_bootstrap_stats: total_problems=100, skipped=96, used=4
+gt_correlation(code_reward): mean_spearman=0.3759, n=4
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8750, std=0.3307, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0549, std=0.2127, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=0.1140, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=-1.0000, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8125, std=0.3903, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0526, std=0.2037, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=-0.4151, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=2, num_samples=32
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=2, num_samples=32
+self_bootstrap_stats: total_problems=100, skipped=98, used=2
+gt_correlation(code_reward): mean_spearman=0.0667, n=2
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8125, std=0.3903, num_groups=3, num_samples=48
+estimated_case_reward: mean=-0.0600, std=0.2326, num_groups=3, num_samples=48
+self_bootstrap_stats: total_problems=100, skipped=97, used=3
+gt_correlation(code_reward): mean_spearman=-0.3662, n=2
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.1095, std=0.2896, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=0.0976, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8250, std=0.3800, num_groups=5, num_samples=80
+estimated_case_reward: mean=-0.0431, std=0.2462, num_groups=5, num_samples=80
+self_bootstrap_stats: total_problems=100, skipped=95, used=5
+gt_correlation(code_reward): mean_spearman=0.0037, n=3
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.5625, std=0.4961, num_groups=1, num_samples=16
+estimated_case_reward: mean=0.0604, std=0.2339, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=0.4216, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=2, num_samples=32
+estimated_case_reward: mean=-0.0571, std=0.2222, num_groups=2, num_samples=32
+self_bootstrap_stats: total_problems=100, skipped=98, used=2
+gt_correlation(code_reward): mean_spearman=0.6454, n=2
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=3, num_samples=48
+estimated_case_reward: mean=-0.0833, std=0.2764, num_groups=3, num_samples=48
+self_bootstrap_stats: total_problems=100, skipped=97, used=3
+gt_correlation(code_reward): mean_spearman=-1.0000, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0557, std=0.2156, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=0.4472, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=2, num_samples=32
+estimated_case_reward: mean=-0.0566, std=0.2206, num_groups=2, num_samples=32
+self_bootstrap_stats: total_problems=100, skipped=98, used=2
+gt_correlation(code_reward): mean_spearman=-0.0915, n=2
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.5625, std=0.4961, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0528, std=0.2047, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=0.1240, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8438, std=0.3631, num_groups=2, num_samples=32
+estimated_case_reward: mean=-0.0003, std=0.2487, num_groups=2, num_samples=32
+self_bootstrap_stats: total_problems=100, skipped=98, used=2
+gt_correlation(code_reward): mean_spearman=0.5580, n=2
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0577, std=0.2235, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=-0.3881, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7500, std=0.4330, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7500, std=0.4330, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=-1.0000, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9062, std=0.2915, num_groups=2, num_samples=32
+estimated_case_reward: mean=-0.0577, std=0.2242, num_groups=2, num_samples=32
+self_bootstrap_stats: total_problems=100, skipped=98, used=2
+gt_correlation(code_reward): mean_spearman=-0.0935, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.6250, std=0.4841, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.1875, std=0.3903, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=-1.0000, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8125, std=0.3903, num_groups=1, num_samples=16
+estimated_case_reward: mean=0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.6875, std=0.4635, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8750, std=0.3307, num_groups=2, num_samples=32
+estimated_case_reward: mean=-0.0003, std=0.2487, num_groups=2, num_samples=32
+self_bootstrap_stats: total_problems=100, skipped=98, used=2
+gt_correlation(code_reward): mean_spearman=0.7658, n=2
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.6875, std=0.4635, num_groups=1, num_samples=16
+estimated_case_reward: mean=0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=0.9428, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0618, std=0.2395, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=-0.3315, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7500, std=0.4330, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=-0.0778, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8750, std=0.3307, num_groups=1, num_samples=16
+estimated_case_reward: mean=0.0598, std=0.2317, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=0.0976, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7500, std=0.4330, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.6250, std=0.4841, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=-0.6162, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8750, std=0.3307, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0614, std=0.2379, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=0.5070, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=1.0000, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8750, std=0.3307, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.1250, std=0.3307, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=-1.0000, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=-1.0000, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.6875, std=0.4635, num_groups=2, num_samples=32
+estimated_case_reward: mean=-0.0623, std=0.2414, num_groups=2, num_samples=32
+self_bootstrap_stats: total_problems=100, skipped=98, used=2
+gt_correlation(code_reward): mean_spearman=-0.4243, n=2
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0532, std=0.2059, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=-0.1232, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8750, std=0.3307, num_groups=1, num_samples=16
+estimated_case_reward: mean=0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8750, std=0.3307, num_groups=1, num_samples=16
+estimated_case_reward: mean=0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.1250, std=0.3307, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.1250, std=0.3307, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=0.1875, std=0.3903, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=0.0667, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=1.0000, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.6250, std=0.4841, num_groups=1, num_samples=16
+estimated_case_reward: mean=0.1201, std=0.3178, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=0.5222, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.7812, std=0.4134, num_groups=2, num_samples=32
+estimated_case_reward: mean=-0.0961, std=0.4526, num_groups=2, num_samples=32
+self_bootstrap_stats: total_problems=100, skipped=98, used=2
+gt_correlation(code_reward): mean_spearman=0.3721, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0598, std=0.2318, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=0.1462, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8750, std=0.3307, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.9375, std=0.2421, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.8750, std=0.3307, num_groups=1, num_samples=16
+estimated_case_reward: mean=-0.0625, std=0.2421, num_groups=1, num_samples=16
+self_bootstrap_stats: total_problems=100, skipped=99, used=1
+gt_correlation(code_reward): mean_spearman=-1.0000, n=1
+reward_mode: self_bootstrap
+estimated_code_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+estimated_case_reward: mean=0.0000, std=0.0000, num_groups=0, num_samples=0
+self_bootstrap_stats: total_problems=100, skipped=100, used=0
+gt_correlation(code_reward): no valid correlations computed

@@ -3,7 +3,7 @@ import numpy as np
 
 np.random.seed(2026)
 
-BASE_DIR = '/mnt/shared-storage-user/zhupengyu1/tangling/grpo/CURE/analysis'
+BASE_DIR = '/mnt/shared-storage-user/zhupengyu1/zpy3/vllm/CURE/analysis'
 
 # ===== Part 1: Extend train_curve.csv =====
 train = pd.read_csv(f'{BASE_DIR}/train_curve.csv')

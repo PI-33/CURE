@@ -1,0 +1,57 @@
+{
+  "step": 304,
+  "recorded_at": "2026-04-05T02:08:15",
+  "_field_help_zh_file": "metrics_field_help_zh.json",
+  "sampling": {
+    "mean_code_response_tokens": 384.858125,
+    "mean_case_response_tokens": 500.96375
+  },
+  "execution": {
+    "code_acc": 0.2225,
+    "code_accumulate_acc": 0.325234375,
+    "case_acc": 0.5580357142857143,
+    "case_accumulate_acc": 0.6495786516853933,
+    "p_01_as_logged": 0.33191670208244795,
+    "p_00": 0.08435072142064373,
+    "bon_by_scale": [
+      {
+        "num_code": 4,
+        "num_gen_tests": 4,
+        "acc": 0.27,
+        "accumulate_acc": 0.39625
+      },
+      {
+        "num_code": 16,
+        "num_gen_tests": 16,
+        "acc": 0.29,
+        "accumulate_acc": 0.4125
+      }
+    ]
+  },
+  "reward": {
+    "reward_mode": "gt_based",
+    "rollout_debug_meta": {
+      "enabled": false,
+      "max_problems_per_step": null,
+      "truncate_chars": null,
+      "slots_remaining_after_step": 0
+    },
+    "code_reward": {
+      "mean": 0.3252,
+      "std": 0.4203,
+      "num_groups": 6,
+      "num_samples": 1600
+    },
+    "case_reward": {
+      "mean": 0.3435,
+      "std": 0.4932,
+      "num_groups": 1,
+      "num_samples": 672
+    },
+    "problems": {
+      "total": 100,
+      "used": 100,
+      "skipped": 0
+    }
+  }
+}

@@ -1,4 +1,4 @@
-cd /mnt/shared-storage-user/zhupengyu1/tangling/grpo/CURE
+cd /mnt/shared-storage-user/zhupengyu1/zpy3/vllm/CURE
 source /mnt/shared-storage-user/zhupengyu1/anaconda3/bin/activate CURE
 
 export VLLM_CUDART_SO_PATH=/mnt/shared-storage-user/zhupengyu1/anaconda3/envs/CURE/lib/python3.10/site-packages/nvidia/cuda_runtime/lib/libcudart.so.12

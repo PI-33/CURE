@@ -31,6 +31,7 @@ from train_utils.base_exp import BasePPOExp, BasePPOExpConfig
 
 
 import optimization_config
+from runtime_paths import temp_data_dir, experiment_ckpt_root
 
 
 
@@ -45,12 +46,12 @@ class PPOExpConfig(BasePPOExpConfig):
 
     # resource related settings
     ref_num_nodes: int = total_num_nodes
-    ref_num_gpus_per_node: int = 1
+    ref_num_gpus_per_node: int = optimization_config.actor_num_gpus_per_node
     actor_num_nodes: int = total_num_nodes
-    actor_num_gpus_per_node: int = 1
+    actor_num_gpus_per_node: int = optimization_config.actor_num_gpus_per_node
     critic_num_nodes: int = total_num_nodes
     critic_num_gpus_per_node: int = 1
-    colocate_all: bool = True
+    colocate_all: bool = False
     colocate_critic_reward: bool = True
     colocate_actor_ref: bool = True
     vllm_num_engines: int = total_num_nodes
@@ -66,11 +67,9 @@ class PPOExpConfig(BasePPOExpConfig):
     rl_code_data: Optional[str] = "temp_data/rl_code_data.json"
     rl_case_data: Optional[str] = "temp_data/rl_case_data.json"
 
-    os.makedirs(os.path.dirname("./ckpt"), exist_ok=True)
-    ckpt_path: str = f"ckpt"
-    save_path: str = f"ckpt"
-    os.makedirs("./tb_logs", exist_ok=True)
-    tensorboard_log_dir: str = f"tb_logs"
+    ckpt_path: str = "ckpt"
+    save_path: str = "ckpt"
+    tensorboard_log_dir: str = "tb_logs"
 
     # ppo related settings
     actor_learning_rate: float = optimization_config.actor_learning_rate
@@ -130,6 +129,15 @@ if __name__ == "__main__":
     cfg.global_step = args.step
     if args.tb_dir is not None:
         cfg.tensorboard_log_dir = args.tb_dir
+
+    td = temp_data_dir()
+    cfg.rl_data = os.path.join(td, "rl_data.json")
+    cfg.rl_code_data = os.path.join(td, "rl_code_data.json")
+    cfg.rl_case_data = os.path.join(td, "rl_case_data.json")
+    # actors.save_model 会写入 join(save_path, optimized_model_name)，故此处必须是 ckpt 父目录，不能已是 .../ckpt/optimized
+    ckpt_parent = experiment_ckpt_root()
+    cfg.ckpt_path = ckpt_parent
+    cfg.save_path = ckpt_parent
 
     exp = PPOExp().set_cfg(cfg)
     

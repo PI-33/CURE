@@ -1,0 +1,198 @@
+code response length: 5664.706875, case response length: 5989.288125
+code acc: 0.294375, code accumulate acc: 0.346015625
+case acc: 0.47606382978723405, case accumulate acc: 0.554140127388535
+p_01: 0.1636363636363637
+p_00: 0.009486999297259312
+BoN setting (4, 4):
+acc: 0.35, accumulate acc: 0.4175
+BoN setting (16, 16):
+acc: 0.41, accumulate acc: 0.49625
+code response length: 5101.210625, case response length: 5638.839375
+code acc: 0.4, code accumulate acc: 0.440625
+case acc: 0.4302536231884058, case accumulate acc: 0.5021484375
+p_01: 0.1198377581120944
+p_00: 0.00700339558573854
+BoN setting (4, 4):
+acc: 0.53, accumulate acc: 0.58375
+BoN setting (16, 16):
+acc: 0.61, accumulate acc: 0.695
+code response length: 5037.69625, case response length: 5792.920625
+code acc: 0.383125, code accumulate acc: 0.44046875
+case acc: 0.42939814814814814, case accumulate acc: 0.5121329526916802
+p_01: 0.3238434163701067
+p_00: 0.05132133282267331
+BoN setting (4, 4):
+acc: 0.42, accumulate acc: 0.49125
+BoN setting (16, 16):
+acc: 0.48, accumulate acc: 0.57
+code response length: 4598.3075, case response length: 5767.645
+code acc: 0.433125, code accumulate acc: 0.47426007556675065
+case acc: 0.42956349206349204, case accumulate acc: 0.4889069264069264
+p_01: 0.19729206963249513
+p_00: 0.008025222126683863
+BoN setting (4, 4):
+acc: 0.48, accumulate acc: 0.5491183879093199
+BoN setting (16, 16):
+acc: 0.57, accumulate acc: 0.6360201511335013
+code response length: 4289.85875, case response length: 5608.425625
+code acc: 0.37, code accumulate acc: 0.4221875
+case acc: 0.4396186440677966, case accumulate acc: 0.5280827702702703
+p_01: 0.16346153846153844
+p_00: 0.04321663019693654
+BoN setting (4, 4):
+acc: 0.46, accumulate acc: 0.5175
+BoN setting (16, 16):
+acc: 0.55, accumulate acc: 0.63125
+code response length: 4169.089375, case response length: 5663.98625
+code acc: 0.32375, code accumulate acc: 0.399296875
+case acc: 0.5176886792452831, case accumulate acc: 0.6113658301158301
+p_01: 0.29512079583135953
+p_00: 0.04638687283054591
+BoN setting (4, 4):
+acc: 0.38, accumulate acc: 0.465
+BoN setting (16, 16):
+acc: 0.45, accumulate acc: 0.56625
+code response length: 3355.416875, case response length: 5632.77375
+code acc: 0.353125, code accumulate acc: 0.41453125
+case acc: 0.5983796296296297, case accumulate acc: 0.6529867256637168
+p_01: 0.3202668890742285
+p_00: 0.025146689019279127
+BoN setting (4, 4):
+acc: 0.43, accumulate acc: 0.48375
+BoN setting (16, 16):
+acc: 0.46, accumulate acc: 0.545
+code response length: 3401.11125, case response length: 5791.1075
+code acc: 0.34375, code accumulate acc: 0.43796875
+case acc: 0.4298245614035088, case accumulate acc: 0.5084090909090909
+p_01: 0.26913932477413216
+p_00: 0.030902683654106804
+BoN setting (4, 4):
+acc: 0.39, accumulate acc: 0.51375
+BoN setting (16, 16):
+acc: 0.49, accumulate acc: 0.6
+code response length: 2920.543125, case response length: 5511.576875
+code acc: 0.371875, code accumulate acc: 0.4432957393483709
+case acc: 0.5051229508196722, case accumulate acc: 0.5756302521008403
+p_01: 0.3051994301994302
+p_00: 0.08759124087591241
+BoN setting (4, 4):
+acc: 0.47, accumulate acc: 0.5639097744360902
+BoN setting (16, 16):
+acc: 0.51, accumulate acc: 0.6177944862155389
+code response length: 2916.629375, case response length: 5354.730625
+code acc: 0.32, code accumulate acc: 0.4081809583858764
+case acc: 0.5932203389830508, case accumulate acc: 0.68505859375
+p_01: 0.3314087759815243
+p_00: 0.046113689095127613
+BoN setting (4, 4):
+acc: 0.42, accumulate acc: 0.519546027742749
+BoN setting (16, 16):
+acc: 0.5, accumulate acc: 0.5863808322824716
+code response length: 2106.733125, case response length: 5333.523125
+code acc: 0.38375, code accumulate acc: 0.45796875
+case acc: 0.5942796610169492, case accumulate acc: 0.6851587947882736
+p_01: 0.26983453542638947
+p_00: 0.02702702702702703
+BoN setting (4, 4):
+acc: 0.46, accumulate acc: 0.5475
+BoN setting (16, 16):
+acc: 0.48, accumulate acc: 0.58625
+code response length: 2100.469375, case response length: 5231.048125
+code acc: 0.325, code accumulate acc: 0.44621545226130654
+case acc: 0.5829741379310345, case accumulate acc: 0.6692307692307692
+p_01: 0.3604197901049475
+p_00: 0.04415909802693392
+BoN setting (4, 4):
+acc: 0.43, accumulate acc: 0.535175879396985
+BoN setting (16, 16):
+acc: 0.49, accumulate acc: 0.6118090452261307
+code response length: 1884.9625, case response length: 5218.92
+code acc: 0.358125, code accumulate acc: 0.465234375
+case acc: 0.6363636363636364, case accumulate acc: 0.7048429319371727
+p_01: 0.23079750091877982
+p_00: 0.016430853491556367
+BoN setting (4, 4):
+acc: 0.43, accumulate acc: 0.54875
+BoN setting (16, 16):
+acc: 0.47, accumulate acc: 0.595
+code response length: 1632.051875, case response length: 5240.43875
+code acc: 0.358125, code accumulate acc: 0.45171875
+case acc: 0.5808189655172413, case accumulate acc: 0.6548865619546248
+p_01: 0.22816166883963496
+p_00: 0.03407350689127105
+BoN setting (4, 4):
+acc: 0.46, accumulate acc: 0.5775
+BoN setting (16, 16):
+acc: 0.49, accumulate acc: 0.61375
+code response length: 1560.03875, case response length: 5294.524375
+code acc: 0.366875, code accumulate acc: 0.4593392630241423
+case acc: 0.5625, case accumulate acc: 0.659710391822828
+p_01: 0.29931234165761855
+p_00: 0.030338052585957814
+BoN setting (4, 4):
+acc: 0.49, accumulate acc: 0.579415501905972
+BoN setting (16, 16):
+acc: 0.51, accumulate acc: 0.6188055908513341
+code response length: 1511.898125, case response length: 5532.15375
+code acc: 0.3075, code accumulate acc: 0.40265625
+case acc: 0.5365566037735849, case accumulate acc: 0.6671747967479674
+p_01: 0.19926047658175838
+p_00: 0.0956468424279583
+BoN setting (4, 4):
+acc: 0.37, accumulate acc: 0.47625
+BoN setting (16, 16):
+acc: 0.43, accumulate acc: 0.58
+code response length: 1336.99375, case response length: 4923.358125
+code acc: 0.330625, code accumulate acc: 0.44078125
+case acc: 0.5772727272727273, case accumulate acc: 0.6631616257088847
+p_01: 0.28718118582312024
+p_00: 0.05737389295340778
+BoN setting (4, 4):
+acc: 0.41, accumulate acc: 0.5575
+BoN setting (16, 16):
+acc: 0.46, accumulate acc: 0.63125
+code response length: 1311.4625, case response length: 5133.100625
+code acc: 0.384375, code accumulate acc: 0.46502509410288584
+case acc: 0.6676587301587301, case accumulate acc: 0.7655487804878048
+p_01: 0.3201943844492441
+p_00: 0.07120743034055728
+BoN setting (4, 4):
+acc: 0.46, accumulate acc: 0.533249686323714
+BoN setting (16, 16):
+acc: 0.54, accumulate acc: 0.616060225846926
+code response length: 1455.464375, case response length: 5227.239375
+code acc: 0.310625, code accumulate acc: 0.41475125944584385
+case acc: 0.5339912280701754, case accumulate acc: 0.6979376257545271
+p_01: 0.2973451327433628
+p_00: 0.05032765399737877
+BoN setting (4, 4):
+acc: 0.4, accumulate acc: 0.5163727959697733
+BoN setting (16, 16):
+acc: 0.44, accumulate acc: 0.5604534005037783
+code response length: 1271.88125, case response length: 5138.25375
+code acc: 0.336875, code accumulate acc: 0.432734375
+case acc: 0.6541666666666667, case accumulate acc: 0.7596243042671614
+p_01: 0.2530058838577641
+p_00: 0.029359745313052705
+BoN setting (4, 4):
+acc: 0.47, accumulate acc: 0.575
+BoN setting (16, 16):
+acc: 0.54, accumulate acc: 0.66375
+code response length: 1201.591875, case response length: 5101.419375
+code acc: 0.375625, code accumulate acc: 0.49375
+case acc: 0.6979166666666666, case accumulate acc: 0.7641430948419301
+p_01: 0.24834912431811662
+p_00: 0.09066784608580274
+BoN setting (4, 4):
+acc: 0.46, accumulate acc: 0.59375
+BoN setting (16, 16):
+acc: 0.54, accumulate acc: 0.6925
+code response length: 1355.2725, case response length: 4947.618125
+code acc: 0.37875, code accumulate acc: 0.462890625
+case acc: 0.7377232142857143, case accumulate acc: 0.8377681518151815
+p_01: 0.1989830508474576
+p_00: 0.06272189349112427
+BoN setting (4, 4):
+acc: 0.48, accumulate acc: 0.5475
+BoN setting (16, 16):
+acc: 0.53, accumulate acc: 0.61375

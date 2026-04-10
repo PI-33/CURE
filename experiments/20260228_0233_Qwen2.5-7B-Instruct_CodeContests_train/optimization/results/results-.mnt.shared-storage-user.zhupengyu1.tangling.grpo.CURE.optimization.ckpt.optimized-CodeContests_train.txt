@@ -1,0 +1,6 @@
+estimated_code_reward: mean=0.2699, std=0.3874, num_groups=2, num_samples=320
+estimated_case_reward: mean=0.1351, std=0.3712, num_groups=5, num_samples=128
+estimated_code_reward: mean=0.2445, std=0.3358, num_groups=2, num_samples=320
+estimated_case_reward: mean=0.0762, std=0.2989, num_groups=2, num_samples=96
+estimated_code_reward: mean=0.2117, std=0.3644, num_groups=3, num_samples=320
+estimated_case_reward: mean=0.1073, std=0.3642, num_groups=2, num_samples=112

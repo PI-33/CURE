@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-BASE_DIR = '/mnt/shared-storage-user/zhupengyu1/tangling/grpo/CURE/analysis'
+BASE_DIR = '/mnt/shared-storage-user/zhupengyu1/zpy3/vllm/CURE/analysis'
 FIG_DIR = os.path.join(BASE_DIR, 'figures')
 os.makedirs(FIG_DIR, exist_ok=True)
 

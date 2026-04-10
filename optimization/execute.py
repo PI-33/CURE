@@ -10,6 +10,11 @@ import multiprocessing
 from termcolor import cprint
 
 import optimization_config
+from runtime_paths import (
+    temp_data_dir,
+    optimization_results_dir,
+    resolve_path_after_parent_rename,
+)
 
 
 
@@ -118,8 +123,11 @@ def run_scripts_with_chunk(code_list, test_input_list, time_limit_list, worker, 
 
 def execute_scripts(outputs_name, num_chunks):
 
-    os.makedirs(os.path.dirname("./temp_data/outputs-" + outputs_name + '.json'), exist_ok=True)
-    with open("./temp_data/outputs-" + outputs_name + '.json', 'r') as f:
+    _td = temp_data_dir()
+    _in_json = os.path.join(_td, "outputs-" + outputs_name + ".json")
+    _in_json = resolve_path_after_parent_rename(_in_json)
+    os.makedirs(os.path.dirname(_in_json), exist_ok=True)
+    with open(_in_json, "r") as f:
         data = json.load(f)
 
     # get input lists
@@ -229,24 +237,56 @@ def execute_scripts(outputs_name, num_chunks):
             assert int(all(sub_test_table_i)) / 1 <= np.sum(sub_test_table_i).item() / len(sub_test_table_i), "error"
             index_id += 1
 
-    os.makedirs(os.path.dirname("./results/results-" + outputs_name + ".txt"), exist_ok=True)
-    with open("./results/results-" + outputs_name + ".txt", "a") as f:
+    def safe_divide(d1, d2):
+        if d2 == 0:
+            return 0
+        return d1 / d2
+
+    code_acc = safe_divide(code_score, code_num)
+    code_acc_acc = safe_divide(code_acc_score, code_acc_num)
+    case_acc = safe_divide(case_score, case_num)
+    case_acc_acc = safe_divide(case_acc_score, case_acc_num)
+    p_01 = safe_divide(p_01_score, p_01_num)
+    p_00 = safe_divide(p_00_score, p_00_num)
+
+    bon_by_scale = []
+    for si in range(len(stats)):
+        tup = stats[si]["tuple"]
+        bon_by_scale.append(
+            {
+                "num_code": int(tup[0]),
+                "num_gen_tests": int(tup[1]),
+                "acc": float(stats[si]["BoN_score"] / stats[si]["BoN_num"]) if stats[si]["BoN_num"] else 0.0,
+                "accumulate_acc": float(stats[si]["BoN_acc_score"] / stats[si]["BoN_acc_num"])
+                if stats[si]["BoN_acc_num"]
+                else 0.0,
+            }
+        )
+
+    with open(os.path.join(_td, "last_step_execute_metrics.json"), "w", encoding="utf-8") as _ef:
+        json.dump(
+            {
+                "code_acc": float(code_acc),
+                "code_accumulate_acc": float(code_acc_acc),
+                "case_acc": float(case_acc),
+                "case_accumulate_acc": float(case_acc_acc),
+                "p_01_as_logged": float(1 - p_01),
+                "p_00": float(p_00),
+                "bon_by_scale": bon_by_scale,
+            },
+            _ef,
+            indent=2,
+            ensure_ascii=False,
+        )
+
+    _res_dir = optimization_results_dir()
+    _results_txt = os.path.join(_res_dir, "results-" + outputs_name + ".txt")
+    os.makedirs(os.path.dirname(_results_txt), exist_ok=True)
+    with open(_results_txt, "a") as f:
         # Save + print
         def save_and_print(text):
             cprint(text, color="green")
             f.write(text + "\n")
-
-        # Your values
-        def safe_divide(d1, d2):
-            if d2 == 0:
-                return 0
-            return d1/d2
-        code_acc = safe_divide(code_score, code_num)
-        code_acc_acc = safe_divide(code_acc_score, code_acc_num)
-        case_acc = safe_divide(case_score, case_num)
-        case_acc_acc = safe_divide(case_acc_score, case_acc_num)
-        p_01 = safe_divide(p_01_score, p_01_num)
-        p_00 = safe_divide(p_00_score, p_00_num)
 
         save_and_print(f"code acc: {code_acc}, code accumulate acc: {code_acc_acc}")
         save_and_print(f"case acc: {case_acc}, case accumulate acc: {case_acc_acc}")
@@ -268,8 +308,9 @@ def execute_scripts(outputs_name, num_chunks):
         data[i]["all_case_bool_table"] = data[i]["all_case_bool_table"].tolist()
 
     # output the data
-    os.makedirs(os.path.dirname("./temp_data/outputs-" + outputs_name + ".json"), exist_ok=True)
-    with open("./temp_data/outputs-" + outputs_name + ".json", "w", encoding="utf-8") as f:
+    _out_json = os.path.join(_td, "outputs-" + outputs_name + ".json")
+    os.makedirs(os.path.dirname(_out_json), exist_ok=True)
+    with open(_out_json, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
